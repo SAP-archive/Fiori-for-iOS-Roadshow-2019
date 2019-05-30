@@ -6,7 +6,7 @@ This repository contains the materials for the SAP & Apple Roadshow 2019. Prequi
 
 ### Material organization
 
-The Project Book, References and Prerequisites files are located in the root of the repository and the sample backends including the CSDL files are in the Backends folder. The Xcode Playgrounds skeleton project you can find in the OData folder.
+The References and Prerequisites files are located in the root of the repository and the sample backends including the CSDL files are in the Backends folder. The Xcode Playgrounds skeleton project you can find in the OData folder.
 
 ### Feedback
 
