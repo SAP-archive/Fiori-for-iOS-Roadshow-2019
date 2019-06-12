@@ -14,7 +14,7 @@ Part of the workshop will be setting up your development infrastructure. To do s
 - [Change Backend](ChangeBackendGuide.md) - (Optional)
 - [Generate your basic Travel Expense app](GenerateTravelExpenseAppGuide.md)
 
-The [OData Reference Guide](ODataReferenceGuide.md) will provide helpful examples on how to construct backend queries inside your app code. Those samples are tailored to fit the Travel Expense backend.
+The [OData Query Reference Guide](ODataQueryReferenceGuide.md) will provide helpful examples on how to construct backend queries inside your app code. Those samples are tailored to fit the Travel Expense backend.
 
 ### Feedback
 
