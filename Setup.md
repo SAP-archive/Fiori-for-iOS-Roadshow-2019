@@ -16,7 +16,7 @@ This document will teach you how to setup your development environment, Cloud Fo
 ## Set up Cloud Foundry for Mobile Services
 SAP has a Cloud Foundry implementation in the SAP Cloud Platform which allows us to have more control abourt our cloud services and applications deployed in the cloud. To use Cloud Foundry on SAP Cloud Platform we need to set it up first.
 
-> If you're interested in the architectual concepts of Cloud Foundry please see the [Reference document](www.google.com) in this repository.
+> If you're interested in the architectual concepts of Cloud Foundry please see the [Reference document](References.md) in this repository.
 
 <a name="createsubaccount"/>
 
@@ -28,15 +28,15 @@ Go to the [SAP Cloud Platform](http://account.hanatrial.ondemand.com) and log in
 
 After you successfully logged into your cloud account you will see this overview:
 
-![setup-1](https://user-images.githubusercontent.com/9074514/56997316-3dd45680-6b5c-11e9-92c4-ed514da35bba.png)
+![setup-1](https://user-images.githubusercontent.com/9074514/59389323-e6143800-8d22-11e9-8c6b-009845dd4380.png)
 
 Please go ahead and click on **Cloud Foundry Trial** to go to the Cloud Foundry landscape. You should see a subdomain and on top you should see the Region listed in the breadcrumbs. Depending what your home location is this will show a different region as the one shown in the Screenshot.
 
-![setup-2](https://user-images.githubusercontent.com/9074514/56997318-3dd45680-6b5c-11e9-9d52-062908cd3884.png)
+![setup-2](https://user-images.githubusercontent.com/9074514/59389324-e6acce80-8d22-11e9-99bd-742e3f9cc7a1.png)
 
 At the moment SAP Cloud Platform Mobile Services, which is used for administrating, monitoring and configuring your app, is only available in the region **Europe (Frankfurt)    CF/AWS** for trial. Please go ahead and select the region and choose **Europe (Frankfurt)    CF/AWS**.
 
-![setup-3](https://user-images.githubusercontent.com/9074514/56997319-3e6ced00-6b5c-11e9-9744-f34d840a7da4.png)
+![setup-3](https://user-images.githubusercontent.com/9074514/59389325-e6acce80-8d22-11e9-93ae-804741be9d54.png)
 
 Now select your **Global Account** tile.
 
