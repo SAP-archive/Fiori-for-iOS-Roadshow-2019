@@ -1,4 +1,4 @@
-# Set up Guide
+# Setup Guide
 
 This document will teach you how to setup your development environment, Cloud Foundry landscape and how to deploy and alter the used Java Backend.
 
