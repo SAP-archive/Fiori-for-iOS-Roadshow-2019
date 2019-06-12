@@ -10,9 +10,9 @@ The References and Prerequisites files are located in the root of the repository
 
 Part of the workshop will be setting up your development infrastructure. To do so, you will follow guides which are ordered like the following:
 
-- Setup
-- ChangeBackend (optional)
-- Generate your basic Travel Expense app
+- [Setup Guide](SetupGuide.md)
+- [Change Backend](ChangeBackendGuide.md) - (Optional)
+- [Generate your basic Travel Expense app](GenerateTravelExpenseAppGuide.md)
 
 The [OData Reference Guide](ODataReferenceGuide.md) will provide helpful examples on how to construct backend queries inside your app code. Those samples are tailored to fit the Travel Expense backend.
 
@@ -28,7 +28,7 @@ The requirements to follow the exercises in this repository, including hardware 
 
 ## Download and installation
 
-To follow the workshop it is necesseray to deploy the backend in your SAP Cloud Platform account. This will be described in the [Setup Cloud Foundry](https://github.wdf.sap.corp/d061070/Project-Book/blob/master/Backends/Setup%20Cloud%20Foundry.md) file.
+To follow the workshop it is necesseray to deploy the backend in your SAP Cloud Platform account. This will be described in the [Setup Cloud Foundry]() file.
 
 
 ## How to obtain support
