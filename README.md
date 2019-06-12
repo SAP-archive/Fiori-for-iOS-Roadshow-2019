@@ -1,4 +1,5 @@
 # Fiori-for-iOS-Roadshow-2019
+A collection of materials for the joined SAP & Apple Roadshow event.
 
 ## Description
 
