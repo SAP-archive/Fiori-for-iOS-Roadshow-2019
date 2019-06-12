@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the materials for the SAP & Apple Roadshow 2019. Prequisites are documented in the [Prerequisites](prerequisites.md) file. You also can find a [Reference](References.md) file which contains links to various information and ressource websites.
+This repository contains the materials for the SAP & Apple Roadshow 2019. Prequisites are documented in the [Prerequisites](Prerequisites.md) file. You also can find a [Reference](References.md) file which contains links to various information and ressource websites.
 
 ### Material organization
 
@@ -10,11 +10,11 @@ The References and Prerequisites files are located in the root of the repository
 
 Part of the workshop will be setting up your development infrastructure. To do so, you will follow guides which are ordered like the following:
 
-- [Setup Guide](Setup Guide.md)
-- [Change Backend Guide](Change Backend Guide.md) - (Optional)
+- [Setup Guide](SetupGuide.md)
+- [Change Backend Guide](ChangeBackendGuide.md) - (Optional)
 - [Generate your basic Travel Expense app](GenerateTravelExpenseAppGuide.md)
 
-The [OData Query Reference Guide](OData Query Reference Guide.md) will provide helpful examples on how to construct backend queries inside your app code. Those samples are tailored to fit the Travel Expense backend.
+The [OData Query Reference Guide](ODataQueryReferenceGuide.md) will provide helpful examples on how to construct backend queries inside your app code. Those samples are tailored to fit the Travel Expense backend.
 
 ### Feedback
 
@@ -28,7 +28,7 @@ The requirements to follow the exercises in this repository, including hardware 
 
 ## Download and installation
 
-To follow the workshop it is necesseray to deploy the backend in your SAP Cloud Platform account. This will be described in the [Setup Guide](Setup Guide.md) file.
+To follow the workshop it is necesseray to deploy the backend in your SAP Cloud Platform account. This will be described in the [Setup Guide](SetupGuide.md) file.
 
 
 ## How to obtain support
