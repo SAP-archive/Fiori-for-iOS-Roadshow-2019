@@ -1,0 +1,14 @@
+[
+    {
+        "Description": "Approved",
+        "ReportStatusID": "601"
+    },
+    {
+        "Description": "In Review",
+        "ReportStatusID": "602"
+    },
+    {
+        "Description": "Declined",
+        "ReportStatusID": "603"
+    }
+]

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="com.sap.cloud.server.odata.security.v1">
+            <Term Name="Roles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntityContainer">
+                <Annotation Term="Core.Description">
+                    Use this annotation to declare roles that may be referenced in application code,
+                    but not specified in other annotations.
+                </Annotation>
+            </Term>
+            <Term Name="ServiceUserRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntityContainer">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to access the OData service.
+                </Annotation>
+            </Term>
+            <Term Name="ViewMetricsRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntityContainer">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to access the OData metrics.
+                </Annotation>
+            </Term>
+            <Term Name="ReadWriteRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntitySet">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to access (read or write) entities in the entity set.
+                    Can be overridden by the more specific ReadRoles, WriteRoles, CreateRoles, UpdateRoles and DeleteRoles.
+                </Annotation>
+            </Term>
+            <Term Name="ReadRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntitySet">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to read entities from the entity set.
+                </Annotation>
+            </Term>
+            <Term Name="WriteRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntitySet">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to write (create, update, or delete) entities in the entity set.
+                    Can be overridden by the more specific CreateRoles, UpdateRoles and DeleteRoles.
+                </Annotation>
+            </Term>
+            <Term Name="CreateRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntitySet">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to create entities in the entity set.
+                </Annotation>
+            </Term>
+            <Term Name="UpdateRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntitySet">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to update entities in the entity set.
+                </Annotation>
+            </Term>
+            <Term Name="DeleteRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="EntitySet">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to delete entities from the entity set.
+                </Annotation>
+            </Term>
+            <Term Name="InvokeRoles" Type="Collection(Edm.String)" Nullable="false" AppliesTo="Action ActionImport Function FunctionImport">
+                <Annotation Term="Core.Description">
+                    User must belong to one or more of these roles to be permitted to invoke this action or function.
+                </Annotation>
+            </Term>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

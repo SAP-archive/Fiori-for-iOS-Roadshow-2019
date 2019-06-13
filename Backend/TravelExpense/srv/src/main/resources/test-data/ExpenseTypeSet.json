@@ -1,0 +1,10 @@
+[
+    {
+        "Description": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "ExpenseTypeID": "401"
+    },
+    {
+        "Description": "XYZ",
+        "ExpenseTypeID": "402"
+    }
+]

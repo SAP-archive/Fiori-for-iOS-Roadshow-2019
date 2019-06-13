@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.cloud.server.odata.cache.v1" Alias="Cache" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotation Term="Core.Description" String="This schema defines terms and types for OData server-side caching."/>
+            <Term Name="PartitionBy" Type="Edm.String" AppliesTo="EntitySet EntityType">
+                <Annotation Term="Core.Description" String="Comma-separated list. Indicates one or more entity-qualified structural properties for cache partitioning, e.g. Region/ID. Also ClientID may be included for pattitioning by client identitifier."/>
+            </Term>
+            <Term Name="RefreshAfter" Type="Edm.String" AppliesTo="EntitySet EntityType">
+                <Annotation Term="Core.Description" String="Indicates that this entity type/set will be refreshed after another specified entity type/set, as opposed to using Schedule or Timeout to indicate when this entity type/set should be refreshed."/>
+            </Term>
+            <Term Name="RefreshBy" Type="Edm.String" AppliesTo="EntitySet EntityType">
+                <Annotation Term="Core.Description" String="Comma-separated list. Indicates one or more cache refresh mechanisms for this entity, chosen from the options: dcn, loadAll, loadPartition. At most one load option can be included."/>
+            </Term>
+            <Term Name="Schedule" Type="Edm.TimeOfDay" AppliesTo="EntitySet EntityType">
+                <Annotation Term="Core.Description" String="Indicates a daily refresh time (time of day in UTC) for backend data that is cached by an entity container or entity set. Overrides Timeout if both are specified."/>
+            </Term>
+            <Term Name="Timeout" Type="Edm.Duration" AppliesTo="EntitySet EntyityType">
+                <Annotation Term="Core.Description" String="Indicates a cache expiration timeout for backend data that is cached by an entity container or entity set. Defaults to one hour."/>
+            </Term>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

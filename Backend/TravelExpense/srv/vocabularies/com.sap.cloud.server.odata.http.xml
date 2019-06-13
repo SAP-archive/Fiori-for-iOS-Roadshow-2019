@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.cloud.server.odata.http.v1" Alias="HTTP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotation Term="Core.Description" String="This schema defines terms and types for OData/HTTP mapping."/>
+            <Term Name="Destination" Type="Edm.String" AppliesTo="EntitySet EntityType">
+                <Annotation Term="Core.Description" String="Specifies an HTTP destination name for entity handler generation."/>
+            </Term>
+            <Term Name="Request" Type="Edm.String" AppliesTo="EntitySet EntityType">
+                <Annotation Term="Core.Description" String="Specifies an HTTP request line for entity handler generation (with template parameters using ${...} notation)."/>
+            </Term>
+            <Term Name="RequestBody" Type="Edm.String" AppliesTo="EntitySet EntityType">
+                <Annotation Term="Core.Description" String="Specifies bindings for an HTTP request body using JSON or XML binding notation."/>
+            </Term>
+            <Term Name="ResponseBody" Type="Edm.String" AppliesTo="EntitySet EntityType">
+                <Annotation Term="Core.Description" String="Specifies bindings for an HTTP response body using JSON or XML binding notation."/>
+            </Term>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

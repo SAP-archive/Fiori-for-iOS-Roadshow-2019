@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:edmx4="http://docs.oasis-open.org/odata/ns/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx4:Reference Uri="vocabularies/com.sap.cloud.server.odata.sql.v1.xml">
+        <edmx4:Include Namespace="com.sap.cloud.server.odata.sql.v1" Alias="SQL"/>
+    </edmx4:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="com.example.backend.travelexpense" Alias="TravelExpense" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Attachment" m:HasStream="true">
+                <Key>
+                    <PropertyRef Name="AttachmentID"/>
+                </Key>
+                <Property Name="AttachmentID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="ExpenseID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="Image" Type="Edm.Binary" Nullable="false" MaxLength="256"/>
+                <NavigationProperty Name="Expense" Relationship="TravelExpense.Attachment_to_Expense" FromRole="AttachmentDependent" ToRole="ExpensePrincipal"/>
+            </EntityType>
+            <EntityType Name="Currency">
+                <Key>
+                    <PropertyRef Name="CurrencyID"/>
+                </Key>
+                <Property Name="Abbreviation" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="CurrencyID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <NavigationProperty Name="Expenses" Relationship="TravelExpense.Expense_to_Currency" FromRole="CurrencyPrincipal" ToRole="ExpenseDependent"/>
+            </EntityType>
+            <EntityType Name="Expense">
+                <Key>
+                    <PropertyRef Name="ExpenseID"/>
+                </Key>
+                <Property Name="Amount" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="2"/>
+                <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="64"/>
+                <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="64"/>
+                <Property Name="CurrencyID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="Date" Type="Edm.DateTime" Nullable="false" sap:display-format="Date"/>
+                <Property Name="ExpenseID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="ExpenseTypeID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="Notes" Type="Edm.String" Nullable="true" MaxLength="256"/>
+                <Property Name="PaymentTypeID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="Personal" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="PostalCode" Type="Edm.String" Nullable="true" MaxLength="64"/>
+                <Property Name="ReportID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="State" Type="Edm.String" Nullable="true" MaxLength="64"/>
+                <NavigationProperty Name="Attachments" Relationship="TravelExpense.Attachment_to_Expense" FromRole="ExpensePrincipal" ToRole="AttachmentDependent"/>
+                <NavigationProperty Name="Currency" Relationship="TravelExpense.Expense_to_Currency" FromRole="ExpenseDependent" ToRole="CurrencyPrincipal"/>
+                <NavigationProperty Name="ExpenseType" Relationship="TravelExpense.Expense_to_ExpenseType" FromRole="ExpenseDependent" ToRole="ExpenseTypePrincipal"/>
+                <NavigationProperty Name="PaymentType" Relationship="TravelExpense.Expense_to_PaymentType" FromRole="ExpenseDependent" ToRole="PaymentTypePrincipal"/>
+                <NavigationProperty Name="Report" Relationship="TravelExpense.Expense_to_Report" FromRole="ExpenseDependent" ToRole="ReportPrincipal"/>
+            </EntityType>
+            <EntityType Name="ExpenseType">
+                <Key>
+                    <PropertyRef Name="ExpenseTypeID"/>
+                </Key>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <Property Name="ExpenseTypeID" Type="Edm.Int64" Nullable="false"/>
+                <NavigationProperty Name="Expenses" Relationship="TravelExpense.Expense_to_ExpenseType" FromRole="ExpenseTypePrincipal" ToRole="ExpenseDependent"/>
+            </EntityType>
+            <EntityType Name="PaymentType">
+                <Key>
+                    <PropertyRef Name="PaymentTypeID"/>
+                </Key>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <Property Name="PaymentTypeID" Type="Edm.Int64" Nullable="false"/>
+                <NavigationProperty Name="Expenses" Relationship="TravelExpense.Expense_to_PaymentType" FromRole="PaymentTypePrincipal" ToRole="ExpenseDependent"/>
+            </EntityType>
+            <EntityType Name="Report">
+                <Key>
+                    <PropertyRef Name="ReportID"/>
+                </Key>
+                <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="64"/>
+                <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="64"/>
+                <Property Name="End" Type="Edm.DateTime" Nullable="false" sap:display-format="Date"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <Property Name="ReportID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="ReportStatusID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="Start" Type="Edm.DateTime" Nullable="false" sap:display-format="Date"/>
+                <Property Name="State" Type="Edm.String" Nullable="true" MaxLength="64"/>
+                <NavigationProperty Name="Expenses" Relationship="TravelExpense.Expense_to_Report" FromRole="ReportPrincipal" ToRole="ExpenseDependent"/>
+                <NavigationProperty Name="ReportStatus" Relationship="TravelExpense.Report_to_ReportStatus" FromRole="ReportDependent" ToRole="ReportStatusPrincipal"/>
+            </EntityType>
+            <EntityType Name="ReportStatus">
+                <Key>
+                    <PropertyRef Name="ReportStatusID"/>
+                </Key>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <Property Name="ReportStatusID" Type="Edm.Int64" Nullable="false"/>
+                <NavigationProperty Name="Reports" Relationship="TravelExpense.Report_to_ReportStatus" FromRole="ReportStatusPrincipal" ToRole="ReportDependent"/>
+            </EntityType>
+            <Association Name="Attachment_to_Expense">
+                <End Type="TravelExpense.Attachment" Multiplicity="*" Role="AttachmentDependent"/>
+                <End Type="TravelExpense.Expense" Multiplicity="1" Role="ExpensePrincipal"/>
+                <ReferentialConstraint>
+                    <Principal Role="ExpensePrincipal">
+                        <PropertyRef Name="ExpenseID"/>
+                    </Principal>
+                    <Dependent Role="AttachmentDependent">
+                        <PropertyRef Name="ExpenseID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Expense_to_Currency">
+                <End Type="TravelExpense.Expense" Multiplicity="*" Role="ExpenseDependent"/>
+                <End Type="TravelExpense.Currency" Multiplicity="1" Role="CurrencyPrincipal"/>
+                <ReferentialConstraint>
+                    <Principal Role="CurrencyPrincipal">
+                        <PropertyRef Name="CurrencyID"/>
+                    </Principal>
+                    <Dependent Role="ExpenseDependent">
+                        <PropertyRef Name="CurrencyID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Expense_to_ExpenseType">
+                <End Type="TravelExpense.Expense" Multiplicity="*" Role="ExpenseDependent"/>
+                <End Type="TravelExpense.ExpenseType" Multiplicity="1" Role="ExpenseTypePrincipal"/>
+                <ReferentialConstraint>
+                    <Principal Role="ExpenseTypePrincipal">
+                        <PropertyRef Name="ExpenseTypeID"/>
+                    </Principal>
+                    <Dependent Role="ExpenseDependent">
+                        <PropertyRef Name="ExpenseTypeID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Expense_to_PaymentType">
+                <End Type="TravelExpense.Expense" Multiplicity="*" Role="ExpenseDependent"/>
+                <End Type="TravelExpense.PaymentType" Multiplicity="1" Role="PaymentTypePrincipal"/>
+                <ReferentialConstraint>
+                    <Principal Role="PaymentTypePrincipal">
+                        <PropertyRef Name="PaymentTypeID"/>
+                    </Principal>
+                    <Dependent Role="ExpenseDependent">
+                        <PropertyRef Name="PaymentTypeID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Expense_to_Report">
+                <End Type="TravelExpense.Expense" Multiplicity="*" Role="ExpenseDependent"/>
+                <End Type="TravelExpense.Report" Multiplicity="1" Role="ReportPrincipal"/>
+                <ReferentialConstraint>
+                    <Principal Role="ReportPrincipal">
+                        <PropertyRef Name="ReportID"/>
+                    </Principal>
+                    <Dependent Role="ExpenseDependent">
+                        <PropertyRef Name="ReportID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Report_to_ReportStatus">
+                <End Type="TravelExpense.Report" Multiplicity="*" Role="ReportDependent"/>
+                <End Type="TravelExpense.ReportStatus" Multiplicity="1" Role="ReportStatusPrincipal"/>
+                <ReferentialConstraint>
+                    <Principal Role="ReportStatusPrincipal">
+                        <PropertyRef Name="ReportStatusID"/>
+                    </Principal>
+                    <Dependent Role="ReportDependent">
+                        <PropertyRef Name="ReportStatusID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="TravelexpenseService" m:IsDefaultEntityContainer="true">
+                <Annotation Term="SQL.TrackChanges" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+                <EntitySet Name="AttachmentSet" EntityType="TravelExpense.Attachment"/>
+                <EntitySet Name="CurrencySet" EntityType="TravelExpense.Currency"/>
+                <EntitySet Name="ExpenseSet" EntityType="TravelExpense.Expense"/>
+                <EntitySet Name="ExpenseTypeSet" EntityType="TravelExpense.ExpenseType"/>
+                <EntitySet Name="PaymentTypeSet" EntityType="TravelExpense.PaymentType"/>
+                <EntitySet Name="ReportSet" EntityType="TravelExpense.Report"/>
+                <EntitySet Name="ReportStatusSet" EntityType="TravelExpense.ReportStatus"/>
+                <AssociationSet Name="AttachmentSet_to_ExpenseSet" Association="TravelExpense.Attachment_to_Expense">
+                    <End EntitySet="AttachmentSet" Role="AttachmentDependent"/>
+                    <End EntitySet="ExpenseSet" Role="ExpensePrincipal"/>
+                </AssociationSet>
+                <AssociationSet Name="ExpenseSet_to_CurrencySet" Association="TravelExpense.Expense_to_Currency">
+                    <End EntitySet="ExpenseSet" Role="ExpenseDependent"/>
+                    <End EntitySet="CurrencySet" Role="CurrencyPrincipal"/>
+                </AssociationSet>
+                <AssociationSet Name="ExpenseSet_to_ExpenseTypeSet" Association="TravelExpense.Expense_to_ExpenseType">
+                    <End EntitySet="ExpenseSet" Role="ExpenseDependent"/>
+                    <End EntitySet="ExpenseTypeSet" Role="ExpenseTypePrincipal"/>
+                </AssociationSet>
+                <AssociationSet Name="ExpenseSet_to_PaymentTypeSet" Association="TravelExpense.Expense_to_PaymentType">
+                    <End EntitySet="ExpenseSet" Role="ExpenseDependent"/>
+                    <End EntitySet="PaymentTypeSet" Role="PaymentTypePrincipal"/>
+                </AssociationSet>
+                <AssociationSet Name="ExpenseSet_to_ReportSet" Association="TravelExpense.Expense_to_Report">
+                    <End EntitySet="ExpenseSet" Role="ExpenseDependent"/>
+                    <End EntitySet="ReportSet" Role="ReportPrincipal"/>
+                </AssociationSet>
+                <AssociationSet Name="ReportSet_to_ReportStatusSet" Association="TravelExpense.Report_to_ReportStatus">
+                    <End EntitySet="ReportSet" Role="ReportDependent"/>
+                    <End EntitySet="ReportStatusSet" Role="ReportStatusPrincipal"/>
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

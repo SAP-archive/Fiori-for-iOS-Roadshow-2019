@@ -1,0 +1,52 @@
+[
+    {
+    	"Abbreviation": "USD",
+        "CurrencyID": "101",
+        "Description": "US Dollar"
+    },
+    {
+        "Abbreviation": "EUR",
+        "CurrencyID": "102",
+        "Description": "Euro"
+    },
+    {
+        "Abbreviation": "JPY",
+        "CurrencyID": "103",
+        "Description": "Japanese Yen"
+    },
+    {
+        "Abbreviation": "GBP",
+        "CurrencyID": "104",
+        "Description": "Pound Sterling"
+    },
+    {
+        "Abbreviation": "AUD",
+        "CurrencyID": "105",
+        "Description": "Australian Dollar"
+    },
+    {
+        "Abbreviation": "CAD",
+        "CurrencyID": "106",
+        "Description": "Canadian Dollar"
+    },
+    {
+        "Abbreviation": "CHF",
+        "CurrencyID": "107",
+        "Description": "Swiss Franc"
+    },
+    {
+        "Abbreviation": "CNH",
+        "CurrencyID": "108",
+        "Description": "Chinese Renminbi"
+    },
+    {
+        "Abbreviation": "SEK",
+        "CurrencyID": "109",
+        "Description": "Swedish Krona"
+    },
+    {
+        "Abbreviation": "INR",
+        "CurrencyID": "110",
+        "Description": "Indian Rupee"
+    }
+]

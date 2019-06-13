@@ -1,0 +1,10 @@
+[
+    {
+        "Description": "Cash Payment",
+        "PaymentTypeID": "401"
+    },
+    {
+        "Description": "Credit Card Payment",
+        "PaymentTypeID": "402"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "Description": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "PaymentTypeID": "501"
+    },
+    {
+        "Description": "XYZ",
+        "PaymentTypeID": "502"
+    }
+]

@@ -1,0 +1,25 @@
+{
+	"type": "sap.java",
+	"builders": {
+		"default": "sap.java.maven",
+		"configs": {}
+	},
+	"runners": {
+		"default": "system:/sap.java/default",
+		"configs": {}
+	},
+	"attributes": {
+		"sap.java.pom.name": ["odata-service"],
+		"sap.java.pom.archetype": ["{\"groupId\":\"com.sap.xs.javatools\",\"artifactId\":\"java-maven-arch-web\",\"version\":\"1.0.0\"}"],
+		"sap.java.pom.package": ["com.sap.csdl.odata-service"],
+		"sap.java.pom.enableHdb": ["false"],
+		"sap.java.pom.groupId": ["com.sap.csdl"],
+		"sap.watt.common.setting": [
+			"{\"generation\":[{\"templateId\":\"sap.xs.java.project.web.template\",\"templateVersion\":\"1.0.0\",\"dateTimeStamp\":\"Wed, 28 Mar 2018 06:30:03 GMT\"}],\"basevalidator\":{\"services\":{\"js\":\"jsValidator\",\"xml\":\"xmlValidator\"}}}"
+		],
+		"sap.java.pom.version": ["0.0.1-SNAPSHOT"],
+		"sap.java.pom.artifactId": ["odata-service"]
+	},
+	"description": "",
+	"mixinTypes": ["mtamodule"]
+}

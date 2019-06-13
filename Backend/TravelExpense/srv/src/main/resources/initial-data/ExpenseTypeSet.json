@@ -1,0 +1,54 @@
+[
+    {
+        "Description": "Hotel",
+        "ExpenseTypeID": "301"
+    },
+    {
+        "Description": "Airfare",
+        "ExpenseTypeID": "302"
+    },
+    {
+        "Description": "Car Rental",
+        "ExpenseTypeID": "303"
+    },
+    {
+        "Description": "Fuel",
+        "ExpenseTypeID": "304"
+    },
+    {
+        "Description": "Parking",
+        "ExpenseTypeID": "305"
+    },
+    {
+        "Description": "Taxi",
+        "ExpenseTypeID": "306"
+    },
+    {
+        "Description": "Train",
+        "ExpenseTypeID": "307"
+    },
+    {
+        "Description": "External Invitation",
+        "ExpenseTypeID": "308"
+    },
+    {
+        "Description": "Internal Invitation",
+        "ExpenseTypeID": "309"
+    },
+    {
+        "Description": "Gift External",
+        "ExpenseTypeID": "310"
+    },
+    {
+        "Description": "Breakfast",
+        "ExpenseTypeID": "311"
+    },
+    {
+        "Description": "Dinner",
+        "ExpenseTypeID": "312"
+    },
+    {
+        "Description": "Lunch",
+        "ExpenseTypeID": "313"
+    }
+]

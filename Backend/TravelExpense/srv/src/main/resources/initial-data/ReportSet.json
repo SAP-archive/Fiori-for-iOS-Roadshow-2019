@@ -1,0 +1,32 @@
+[
+    {
+        "City": "London",
+        "Country": "United Kingdom",
+        "End": "2019-04-29T22:16:57.004",
+        "Name": "iOS Conference London",
+        "ReportID": "501",
+        "ReportStatusID": "601",
+        "Start": "2019-04-29T22:16:57.004",
+        "State": null
+    },
+    {
+    	"City": "Los Angeles",
+        "Country": "USA",
+        "End": "2019-08-22T22:16:57.004",
+        "Name": "Customer Facing Los Angeles",
+        "ReportID": "502",
+        "ReportStatusID": "602",
+        "Start": "2019-08-20T22:16:57.004",
+        "State": "California"
+    },
+    {
+    	"City": "Bangalore",
+        "Country": "India",
+        "End": "2019-12-15T22:16:57.004",
+        "Name": "Booth at TechConf",
+        "ReportID": "503",
+        "ReportStatusID": "603",
+        "Start": "2019-12-10T22:16:57.004",
+        "State": null
+    }
+]

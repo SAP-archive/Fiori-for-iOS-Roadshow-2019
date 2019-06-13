@@ -1,0 +1,13 @@
+---
+ID: TravelExpense
+_schema-version: 2.1
+version: 0.1.0
+modules:
+  - name: TravelExpense
+    path: srv
+    type: java
+    parameters:    
+      memory: 1024M
+    properties:    
+      SET_LOGGING_LEVEL: '{odata.service: INFO, sap.xs.console: TRACE, sap.xs.odata: TRACE}'
+      TARGET_RUNTIME: tomee

@@ -1,0 +1,8 @@
+---
+applications:
+  - buildpack: sap_java_buildpack
+    name: TravelExpense
+    path: target/odata-service-0.1.0.war
+    env:    
+      SET_LOGGING_LEVEL: '{odata.service: INFO, sap.xs.console: TRACE, sap.xs.odata: TRACE}'
+      TARGET_RUNTIME: tomee

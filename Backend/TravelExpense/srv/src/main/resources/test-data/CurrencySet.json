@@ -1,0 +1,12 @@
+[
+    {
+        "Abbreviation": "ABC",
+        "CurrencyID": "201",
+        "Description": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+        "Abbreviation": "XYZ",
+        "CurrencyID": "202",
+        "Description": "XYZ"
+    }
+]
