@@ -14,6 +14,7 @@ Part of the workshop will be setting up your development infrastructure. To do s
 - [Setup Guide](SetupGuide.md)
 - [Change Backend Guide](ChangeBackendGuide.md) - (Optional)
 - [App Generation Guide](AppGenerationGuide.md)
+- [How to generate an app with the SAP Cloud Platform for iOS Assistant](ChangeAppUI&ODataQueryReference.md)
 
 The [OData Query Reference Guide](ODataQueryReferenceGuide.md) will provide helpful examples on how to construct backend queries inside your app code. Those samples are tailored to fit the Travel Expense backend.
 
