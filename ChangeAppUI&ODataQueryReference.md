@@ -121,6 +121,7 @@ dataService.fetchExpenseReports(matching: query) { [weak self] reports, error in
 ```
 
 <a name="getexpenses">
+   
 ### Getting the list of expenses for a report
 
 When displaying the details for a selected report, you will likely want to display the list of associated expense items.
@@ -153,6 +154,7 @@ dataService.fetchExpenseItems(matching: query) { [weak self] expenses, error in
 ```
 
 <a name="createexpense">
+   
 ### Creating a new expense
 
 * Assume a property called `report` of type `ExpenseReportItem`.
@@ -173,6 +175,7 @@ dataService.createEntity(newExpense) { error in
 ```
 
 <a name="updateexpense">
+   
 ### Updating an existing expense
 
 * Assume a property called `existingExpense` of type `ExpenseItem`.
@@ -187,6 +190,7 @@ dataService.updateEntity(existingExpense) { error in
 ```
 
 <a name="deleteexpense">
+   
 ### Deleting an existing expense
 
 * Assume a property called `existingExpense` of type `ExpenseItem`.
