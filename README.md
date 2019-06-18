@@ -14,7 +14,7 @@ Part of the workshop will be setting up your development infrastructure. To do s
 - [Setup Guide](SetupGuide.md)
 - [Change Backend Guide](ChangeBackendGuide.md) - (Optional)
 - [App Generation Guide](AppGenerationGuide.md)
-- [How to generate an app with the SAP Cloud Platform for iOS Assistant](ChangeAppUI&ODataQueryReference.md)
+- [Change your App UI and get an idea of the used OData query code](ChangeAppUI&ODataQueryReference.md)
 
 The [OData Query Examples](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/ChangeAppUI%26ODataQueryReference.md#queries) will provide helpful examples on how to construct backend queries inside your app code. Those samples are tailored to fit the Travel Expense backend.
 
