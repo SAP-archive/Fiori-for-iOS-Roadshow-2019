@@ -117,6 +117,8 @@ You will find the following folders:
 * Backend
 * ...
 
+Under the **Release** tab in the repository you can find the WAR file. Please go ahead and download it to later the deploy it to Cloud Foundry.
+
 <a name="deployapp"/>
 
 ## Deploy the Java Backend to Cloud Foundry
