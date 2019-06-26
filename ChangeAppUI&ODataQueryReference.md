@@ -112,12 +112,14 @@ You can do this with all the entities in the service.
 
 ```swift
 // Order the results by the end date of the expense report, descending.
+// Expand the query to also get the associated Report Status.
 let query = DataQuery().orderBy(Report.end, .descending).expand(Report.reportStatus)
 
 // Fetch all expense reports, using the query parameters defined above.
 travelexpenseService?.fetchReportSet(matching: query) { [weak self] reports, error in
    if let error = error {
       NSLog("Error: %@", error!.localizedDescription)
+      return
    }
    self?.reports = reports!
    self?.tableView.reloadData()
@@ -135,25 +137,22 @@ When displaying the details for a selected report, you will likely want to displ
 
 ```swift
 // Filter the results by the selected report ID, automatically retrieving
-// associated records for the payment type and attachments, and ordering
+// associated records for the expense type, attachments, currencies and ordering
 // by the expense date, ascending.
 let reportID = report.reportid!
-let query = DataQuery().filter(Expense.reportid == reportID)
-                       .expand(Expense.paymentType, Expense.attachments)
-                       .orderBy(Expense.itemdate)
-
+let query = DataQuery().filter(Expense.reportID == reportID)
+            .expand(Expense.expenseType, Expense.attachments, Expense.currency)
+            .orderBy(Expense.date)
+            
 // Fetch all expense items, using the query parameters defined above.
-dataService.fetchExpenseItems(matching: query) { [weak self] expenses, error in
-
-    // Make sure no errors occurred.
-    guard let expenses = expenses else {
-        NSLog("Error: %@", error!.localizedDescription)
-        return
-    }
-    
-    // Set the `expenses` property and re-display the list.
-    self?.expenses = expenses
-    self?.tableView.reloadData()
+travelexpenseService?.fetchExpenseSet(matching: query) { [weak self] expenses, error in
+   // Make sure no errors occurred.
+   if let error = error {
+      NSLog("Error: %@", error!.localizedDescription)
+      return
+   }
+   self?.expenses = expenses!
+   self?.tableView.reloadData()
 }
 ```
 
@@ -163,18 +162,23 @@ dataService.fetchExpenseItems(matching: query) { [weak self] expenses, error in
 
 * Assume a property called `report` of type `Report`.
 * Assume a property called `newExpense` of type `Expense`.
+* Assume there is a selected currency, payment type and expense type called `selectedCurrency`, `selectedPaymentType`, `selectedExpenseType`.
 * Assume the properties of `newExpense` have been filled in from the UI.
 
 ```swift
-// Associate the expense with the parent report.
-newExpense.reportid = report.reportid
+let newExpense = Expense()
+// Fill the expense properties
 
-// Create a new record for the expense.
-dataService.createEntity(newExpense) { error in
-    // Make sure no errors occurred.
-    if let error = error {
-        NSLog("Error: %@", error.localizedDescription)
-    }
+// Setting the corresponding IDs which are needed to make references to the navigation link properties
+newExpense.reportID = reportID
+newExpense.currencyID = selectedCurrency?.currencyID
+newExpense.paymentTypeID = selectedPaymentType?.paymentTypeID
+newExpense.expenseTypeID = selectedExpenseType?.expenseTypeID
+
+travelexpenseService.createEntity(newExpense) { error in
+   if let error = error {
+      NSLog("Error: %@", error.localizedDescription)
+   }
 }
 ```
 
