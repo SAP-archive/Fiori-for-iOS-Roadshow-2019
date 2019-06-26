@@ -112,20 +112,15 @@ You can do this with all the entities in the service.
 
 ```swift
 // Order the results by the end date of the expense report, descending.
-let query = DataQuery().orderBy(Report.reportend, .descending)
+let query = DataQuery().orderBy(Report.end, .descending).expand(Report.reportStatus)
 
 // Fetch all expense reports, using the query parameters defined above.
-dataService.fetchExpenseReports(matching: query) { [weak self] reports, error in
-
-    // Make sure no errors occurred.
-    guard let reports = reports else {
-        NSLog("Error: %@", error!.localizedDescription)
-        return
-    }
-    
-    // Set the `reports` property and re-display the list.
-    self?.reports = reports
-    self?.tableView.reloadData()
+travelexpenseService?.fetchReportSet(matching: query) { [weak self] reports, error in
+   if let error = error {
+      NSLog("Error: %@", error!.localizedDescription)
+   }
+   self?.reports = reports!
+   self?.tableView.reloadData()
 }
 ```
 
