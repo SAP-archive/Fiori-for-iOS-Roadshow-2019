@@ -8,7 +8,7 @@ public abstract class TravelexpenseServiceMetadata
 
     private static com.sap.cloud.server.odata.csdl.CsdlDocument resolve()
     {
-        //# /usr/sap/ljs/xs-temp/0f924fe5-cc65-4d37-90d6-72e0a58bb8dd/output/target/tmp/proxy-com.example.backend.travelexpense.csdl.xs:1051:12
+        //# /usr/sap/ljs/xs-temp/11180dad-e520-4efc-8db6-be2ea70cc440/output/target/tmp/proxy-com.example.backend.travelexpense.csdl.xs:1066:12
         com.example.backend.travelexpense.proxy.internal.TravelexpenseServiceFactory.registerAll();
         com.example.backend.travelexpense.proxy.internal.TravelexpenseServiceMetadataParser.parsed.setGeneratedProxies(true);
         return com.example.backend.travelexpense.proxy.internal.TravelexpenseServiceMetadataParser.parsed;

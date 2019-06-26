@@ -1,6 +1,7 @@
 [
     {
         "City": "London",
+        "CostCenter": "Cost-123",
         "Country": "United Kingdom",
         "End": "2019-04-29T22:16:57.004",
         "Name": "iOS Conference London",
@@ -11,6 +12,7 @@
     },
     {
     	"City": "Los Angeles",
+    	"CostCenter": "Cost-456",
         "Country": "USA",
         "End": "2019-08-22T22:16:57.004",
         "Name": "Customer Facing Los Angeles",
@@ -20,7 +22,19 @@
         "State": "California"
     },
     {
+    	"City": "Berlin",
+    	"CostCenter": "Cost-456",
+        "Country": "Germany",
+        "End": "2019-08-22T22:16:57.004",
+        "Name": "Customer Facing Berlin",
+        "ReportID": "504",
+        "ReportStatusID": "604",
+        "Start": "2019-08-20T22:16:57.004",
+        "State": null
+    },
+    {
     	"City": "Bangalore",
+    	"CostCenter": "Cost-789",
         "Country": "India",
         "End": "2019-12-15T22:16:57.004",
         "Name": "Booth at TechConf",

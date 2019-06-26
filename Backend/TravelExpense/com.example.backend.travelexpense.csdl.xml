@@ -67,6 +67,7 @@
                     <PropertyRef Name="ReportID"/>
                 </Key>
                 <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="64"/>
+                <Property Name="CostCenter" Type="Edm.String" Nullable="false" MaxLength="164"/>
                 <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="64"/>
                 <Property Name="End" Type="Edm.DateTime" Nullable="false" sap:display-format="Date"/>
                 <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256"/>

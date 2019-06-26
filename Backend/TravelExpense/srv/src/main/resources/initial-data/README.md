@@ -49,7 +49,7 @@ Sample initial data for file ExpenseSet.json:
         "City": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         "Country": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         "CurrencyID": "201",
-        "Date": "2019-06-13T16:32:21.917",
+        "Date": "2019-06-18T18:33:30.451",
         "ExpenseID": "301",
         "ExpenseTypeID": "401",
         "Notes": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -64,7 +64,7 @@ Sample initial data for file ExpenseSet.json:
         "City": "XYZ",
         "Country": "XYZ",
         "CurrencyID": "202",
-        "Date": "2019-06-13T16:32:21.917",
+        "Date": "2019-06-18T18:33:30.451",
         "ExpenseID": "302",
         "ExpenseTypeID": "402",
         "Notes": null,
@@ -113,22 +113,24 @@ Sample initial data for file ReportSet.json:
 [
     {
         "City": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "CostCenter": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         "Country": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-        "End": "2019-06-13T16:32:21.917",
+        "End": "2019-06-18T18:33:30.451",
         "Name": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         "ReportID": "601",
         "ReportStatusID": "701",
-        "Start": "2019-06-13T16:32:21.917",
+        "Start": "2019-06-18T18:33:30.451",
         "State": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     },
     {
         "City": "XYZ",
+        "CostCenter": "XYZ",
         "Country": "XYZ",
-        "End": "2019-06-13T16:32:21.917",
+        "End": "2019-06-18T18:33:30.451",
         "Name": "XYZ",
         "ReportID": "602",
         "ReportStatusID": "702",
-        "Start": "2019-06-13T16:32:21.917",
+        "Start": "2019-06-18T18:33:30.451",
         "State": null
     }
 ]

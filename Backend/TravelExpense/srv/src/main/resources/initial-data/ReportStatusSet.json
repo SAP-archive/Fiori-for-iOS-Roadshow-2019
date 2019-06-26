@@ -10,5 +10,9 @@
     {
         "Description": "Declined",
         "ReportStatusID": "603"
+    },
+    {
+    	"Description": "Open",
+        "ReportStatusID": "604"
     }
 ]
