@@ -50,18 +50,40 @@ Enter the following information in the upcoming popup and click on **Create**:
 
 Property | Value
 -------- | ---------
-Display Name | *iOS Workshop 2019*
-Subdomain | *iOSWorkshop2019*
+Display Name | *iOS Workshop 2019 <initials>*
+Subdomain | *iOSWorkshop2019<initials>*
 
 You should see your new Subaccount as tile listed on the screen.
 
 ![setup-6](https://user-images.githubusercontent.com/9074514/56997322-3e6ced00-6b5c-11e9-9474-0b9cfaa3b968.png)
 
+<a name="enablecf"/>
+
+### Enable Cloud Foundry for your Subaccount
+
+Please click on the Subaccount **iOS Workshop 2019 <initial>** in the region **Europe (Frankfurt)**.
+
+In the next screen please click on **Enable Cloud Foundry**.
+
+![enable-cf-1](https://user-images.githubusercontent.com/9074514/57001866-f8218900-6b6f-11e9-9632-b486e550aa4f.png)
+
+You can leave the prefilled organization name in the pop up. Click on **Create**.
+
+![enable-cf-2](https://user-images.githubusercontent.com/9074514/56998352-d6200a80-6b5f-11e9-8861-31cbf85edb00.png)
+
+Your Subaccount information should look like this:
+
+![enable-cf-3](https://user-images.githubusercontent.com/9074514/56998350-d6200a80-6b5f-11e9-8c99-05fab0031334.png)
+
+Your Cloud Foundry instance is now fully enabled.
+
+<a name="clonerepo"/>
+
 <a name="enableentitlements"/>
 
 ### Enable Mobile Entitlements to use Mobile Services
 
-To be able to use SAP Cloud Platform Mobile Service on Cloud Foundry we have to assign certain mobile entitlements to your account. To do so please click on **Entitlements** on the right hand navigation.
+To be able to use SAP Cloud Platform Mobile Service on Cloud Foundry we have to assign certain mobile entitlements to your account. To do so please click on **Entitlements** on the left hand navigation.
 
 ![entitlements-1](https://user-images.githubusercontent.com/9074514/57001563-3453ea00-6b6e-11e9-8ca7-725bc95dc038.png)
 
@@ -82,28 +104,6 @@ You will see a list with different entitlements. Some will be already enabled an
 * Mobile Settings Exchange Service is used for device registrations and general access to JSON data
 
 ![entitlements-2](https://user-images.githubusercontent.com/9074514/56997569-1467fa80-6b5d-11e9-8828-5e57aff3d3c4.png)
-
-<a name="enablecf"/>
-
-### Enable Cloud Foundry for your Subaccount
-
-Please go back to the Subaccounts overview in the region **Europe (Frankfurt)** and select your created **iOS Workshop 2019** subaccount.
-
-In the next screen please click on **Enable Cloud Foundry**.
-
-![enable-cf-1](https://user-images.githubusercontent.com/9074514/57001866-f8218900-6b6f-11e9-9632-b486e550aa4f.png)
-
-You can leave the prefilled organization name in the pop up. Click on **Create**.
-
-![enable-cf-2](https://user-images.githubusercontent.com/9074514/56998352-d6200a80-6b5f-11e9-8861-31cbf85edb00.png)
-
-Your Subaccount information should look like this:
-
-![enable-cf-3](https://user-images.githubusercontent.com/9074514/56998350-d6200a80-6b5f-11e9-8c99-05fab0031334.png)
-
-Your Cloud Foundry instance is now fully enabled and functional for future mobile development.
-
-<a name="clonerepo"/>
 
 ## Clone the Fiori-for-iOS-Roadshow-19 repository
 In order to get all the needed ressource artifacts for this workshop you have to clone this repository to your local machine. Why cloning the repository instead of downloading it as ZIP? - If you clone the repository rather then just downloading it as ZIP brings you the advantage that you can pull future changes directly without re-downloading the repository as ZIP.
