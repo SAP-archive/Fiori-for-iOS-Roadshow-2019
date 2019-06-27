@@ -9,7 +9,6 @@ This document contains links to several documentation or information websites fo
 * [Apple](#apple)
   * [Xcode Documentation](#xcode)
   * [Swift Documentation](#swift)
-* [Cloud Foundry](#cf)
 * [OData](#odata)
 
 <a name="sap"/>
@@ -68,11 +67,11 @@ This document contains links to several documentation or information websites fo
 
 <a name="cf"/>
 
-## Cloud Foundry
-
-* [Cloud Foundry Documentation](https://www.cloudfoundry.org/docs-download/)
+<!----
+## Cloud Foundry* [Cloud Foundry Documentation](https://www.cloudfoundry.org/docs-download/)
 * [Cloud Foundry Get Started](https://www.cloudfoundry.org/get-started/)
 * [Getting Started with a Trial Account in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/3609c701207e4c7eae452017b3ef05b0.html)
+---->
 
 <a name="odata"/>
 
