@@ -1,8 +1,4 @@
-# Set up Guide
-
-This document will teach you how to deploy a Java Backend Application on the Neo Landscape.
-
-## Deploy the Java Backend to Neo
+# Deploy the Java Backend to Neo
 
 In the **Release** tab of this GitHub repository you can find the Java Backend Application for the Travel Expense Use Case. 
 
