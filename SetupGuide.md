@@ -9,7 +9,7 @@ This document will teach you how to deploy a Java Backend Application on the Neo
 
 ## Enable Mobile Services for Neo
 
-Please complete the following tutorials in the [Set Up the SAP Cloud Platform SDK for iOS](https://developers.sap.com/group.ios-sdk-setup.html) group:
+Please complete the following tutorials before continuing with the backend deployment:
 
 1. [Enable SAP Cloud Platform Mobile Services](https://developers.sap.com/tutorials/fiori-ios-hcpms-setup.html)
 2. [Configure Mobile Services in iOS Assistant](https://developers.sap.com/tutorials/fiori-ios-scpms-configure-ms-assistant.html)
