@@ -14,6 +14,8 @@ Please complete the following tutorials before continuing with the backend deplo
 1. [Enable SAP Cloud Platform Mobile Services](https://developers.sap.com/tutorials/fiori-ios-hcpms-setup.html)
 2. [Configure Mobile Services in iOS Assistant](https://developers.sap.com/tutorials/fiori-ios-scpms-configure-ms-assistant.html)
 
+> NOTE: Please replace **Basic Authentication** with **SAML Authentication** in the **Configure Mobile Services in iOS Assistant** tutorial!
+
 <a name="deployapp"/>
 
 ## Deploy the Java Backend to Neo
