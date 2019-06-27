@@ -5,6 +5,7 @@
     * [Getting a list of reports](#getlist)
     * [Getting the list of expenses for a report](#getexpenses)
     * [Creating a new expense](#createexpense)
+    * [Attach a receipt to an expense](#attachReceipt)
     * [Updating an existing expense](#updateexpense)
     * [Deleting an existing expense](#deleteexpense)
     * [Submitting a report](#submitreport)
@@ -176,11 +177,38 @@ newExpense.currencyID = selectedCurrency?.currencyID
 newExpense.paymentTypeID = selectedPaymentType?.paymentTypeID
 newExpense.expenseTypeID = selectedExpenseType?.expenseTypeID
 
-travelexpenseService.createEntity(newExpense) { error in
+travelexpenseService.createEntity(newExpense) {[weak self] error in
    if let error = error {
       NSLog("Error: %@", error.localizedDescription)
    }
+   self?.tableView.reloadData()
 }
+```
+
+<a name="attachReceipt">
+
+### Attach a receipt to an expense
+
+* Assume a property called `existingExpense` of type `Expense`.
+* Assume the properties of `existingExpense` are already set and you want to attach an image.
+* Assume the attachments are hold in an array of file URLs pointing to the taken pictures.
+
+```swift
+// Create the image data and add it to the newExpense object.
+let imageData = try? Data(contentsOf: url)
+let attachment = Attachment(withDefaults: false)
+attachment.image = imageData
+
+newExpense.attachments = [attachment]
+            
+travelexpenseService.createEntity(newExpense) {[weak self] error in
+   if let error = error {
+       AlertHelper.displayAlert(with: "Could not create Expense", error: error, viewController: self)
+   }
+   self?.tableView.reloadData()
+}
+
+
 ```
 
 <a name="updateexpense">
@@ -190,11 +218,12 @@ travelexpenseService.createEntity(newExpense) { error in
 * Assume a property called `existingExpense` of type `Expense`.
 
 ```swift
-dataService.updateEntity(existingExpense) { error in
+dataService.updateEntity(existingExpense) {[weak self] error in
     // Make sure no errors occurred.
     if let error = error {
         NSLog("Error: %@", error.localizedDescription)
     }
+    self?.tableView.reloadData()
 }
 ```
 
@@ -205,11 +234,12 @@ dataService.updateEntity(existingExpense) { error in
 * Assume a property called `existingExpense` of type `Expense`.
 
 ```swift
-dataService.deleteEntity(existingExpense) { error in
+dataService.deleteEntity(existingExpense) {[weak self] error in
     // Make sure no errors occurred.
     if let error = error {
         NSLog("Error: %@", error.localizedDescription)
     }
+    self?.tableView.reloadData()
 }
 ```
 
@@ -230,6 +260,7 @@ travelexpenseService.updateEntity(report) { [weak self] error in
     if let error = error {
         NSLog("Error: %@", error.localizedDescription)
     }
+    self?.tableView.reloadData()
  }
 
 ```
