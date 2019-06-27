@@ -3,7 +3,7 @@
 In this guide you will learn how to use the assistant to generate a Master-Detail View app connecting to the previously deployed backend. In addition you will learn how to replace the generated UI with your own.
 
 > NOTE: If you haven't been in the workshop please make sure to finish the following tutorials before going further:
-
+>
 > 1. [Enable SAP Cloud Platform Mobile Services](https://developers.sap.com/tutorials/fiori-ios-hcpms-setup.html)
 > 2. [Configure Mobile Services in iOS Assistant](https://developers.sap.com/tutorials/fiori-ios-scpms-configure-ms-assistant.html)
 
