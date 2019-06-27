@@ -32,15 +32,17 @@ On the left hand side you will see **Applications**, expand it and select **Java
 
 ![deploy-2](https://user-images.githubusercontent.com/9074514/60281890-156f9b00-9906-11e9-8a3b-58c1370be7ef.png)
 
-Now click on **Deploy Application**. In the upcoming screen please browse for the WAR you want to deploy. Also select **Java Web Tomcat 8** as **Runtime Name**.
+Now click on **Deploy Application**. In the upcoming screen please browse for the .war you want to deploy. Also select **Java Web Tomcat 8** as **Runtime Name**.
 
 ![deploy-3](https://user-images.githubusercontent.com/9074514/60282946-654f6180-9908-11e9-9056-fe360a61cb65.png)
 
 Click on **Deploy**.
 
-The following screen should show up where you have the option to start the Java Application the .war was deployed succesfully.
+The following screen should show up. Click on **Start** to start the backend service.
 
 ![deploy-4](https://user-images.githubusercontent.com/9074514/60282947-654f6180-9908-11e9-95a2-90d346ffff96.png)
+
+You will see now the SAP Cloud Platform is starting the backend service for you.
 
 ![deploy-5](https://user-images.githubusercontent.com/9074514/60282948-654f6180-9908-11e9-902f-faaf8fc60b64.png)
 
@@ -48,7 +50,7 @@ If the application was started successfully you should see something similiar li
 
 ![deploy-6](https://user-images.githubusercontent.com/9074514/60282949-654f6180-9908-11e9-9a92-af77faec8061.png)
 
-Click on the application name to see the **Application URLs**.
+Click on the application name to see the **Application URL**.
 
 ![deploy-7](https://user-images.githubusercontent.com/9074514/60282950-65e7f800-9908-11e9-9851-bba888d46186.png)
 
@@ -60,4 +62,4 @@ In the url you can add **/$metadata** to see the metadata definition of the ODat
 
 ![odata-2](https://user-images.githubusercontent.com/9074514/60282954-65e7f800-9908-11e9-9b73-d9ed4e4d4334.png)
 
-You now have succesfully deployed your Java Backend application!
+You have succesfully deployed your Java Backend application!
