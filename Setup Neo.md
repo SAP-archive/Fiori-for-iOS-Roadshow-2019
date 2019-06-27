@@ -26,36 +26,36 @@ Click on the .WAR file to download it.
 ![release-2](https://user-images.githubusercontent.com/9074514/60281609-82cefc00-9905-11e9-867b-cb63fb6de870.png)
 
 Please go back and login to your [SAP Cloud Platform](https://account.hanatrial.ondemand.com/) account. There please select **Neo** as your landscape.
-![deploy-1](https://github.wdf.sap.corp/storage/user/16334/files/23b29480-823e-11e9-8380-6710eb5bc6bb)
+![deploy-1](https://user-images.githubusercontent.com/9074514/60281889-156f9b00-9906-11e9-885d-a21d0221489d.png)
 
 On the left hand side you will see **Applications**, expand it and select **Java Applications**. You should see the following screen showing up.
 
-![deploy-2](https://github.wdf.sap.corp/storage/user/16334/files/257c5800-823e-11e9-9a26-30a9bb795ddb)
+![deploy-2](https://user-images.githubusercontent.com/9074514/60281890-156f9b00-9906-11e9-8a3b-58c1370be7ef.png)
 
 Now click on **Deploy Application**. In the upcoming screen please browse for the WAR you want to deploy. Also select **Java Web Tomcat 8** as **Runtime Name**.
 
-![deploy-3](https://github.wdf.sap.corp/storage/user/16334/files/26ad8500-823e-11e9-8219-77276e6f077e)
+![deploy-3](https://user-images.githubusercontent.com/9074514/60281891-16083180-9906-11e9-8d1f-1850ffcc96c4.png)
 
 Click on **Deploy**.
 
 The following screen should show up where you have the option to start the Java Application the WAR was deployed succesfully.
 
-![deploy-4](https://github.wdf.sap.corp/storage/user/16334/files/27deb200-823e-11e9-9b2d-15987c4242ce)
+![deploy-4](https://user-images.githubusercontent.com/9074514/60281892-16083180-9906-11e9-8c57-0302384c86f2.png)
 
 If the application was started successfully you should see something similiar like this.
 
-![deploy-5](https://github.wdf.sap.corp/storage/user/16334/files/29a87580-823e-11e9-8805-6b6230778beb)
+![deploy-5](https://user-images.githubusercontent.com/9074514/60281893-16a0c800-9906-11e9-9fc3-89c15964f96d.png)
 
 Click on the application name to see the **Application URLs**.
 
-![deploy-6](https://github.wdf.sap.corp/storage/user/16334/files/2b723900-823e-11e9-95dd-ef1b5e9154e9)
+![deploy-6](https://user-images.githubusercontent.com/9074514/60281894-16a0c800-9906-11e9-9ef7-b6592123e65e.png)
 
 To open the service in your browser click the shown URL. You should see the service document now.
 
-![deploy-7](https://github.wdf.sap.corp/storage/user/16334/files/2f05c000-823e-11e9-9509-5e5b3bbd5a8e)
+![deploy-7](https://user-images.githubusercontent.com/9074514/60281895-16a0c800-9906-11e9-8e60-312ffdf20b5e.png)
 
 In the url you can add **/$metadata** to see the metadata definition of the OData Service.
 
-![deploy-8](https://github.wdf.sap.corp/storage/user/16334/files/3200b080-823e-11e9-8230-b746c7efee77)
+![deploy-8](https://user-images.githubusercontent.com/9074514/60281896-16a0c800-9906-11e9-96cb-670d745b34df.png)
 
 You now have succesfully deployed your Java Backend application!
