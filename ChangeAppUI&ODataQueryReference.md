@@ -99,10 +99,10 @@ The code in each of these examples can be used with any of the proxy classes. Th
 
 If you're interested on exploring the service through your browser you can do this as like this:
 
-- ServiceDocument: https://iosworkshop2019.cfapps.eu10.hana.ondemand.com/
-- MetadataDocument: https://iosworkshop2019.cfapps.eu10.hana.ondemand.com/$metadata
-- Reports: https://iosworkshop2019.cfapps.eu10.hana.ondemand.com/ReportSet
-- Report with id 1: https://iosworkshop2019.cfapps.eu10.hana.ondemand.com/ReportSet(1)
+- ServiceDocument: <your-service-url>
+- MetadataDocument: <your-service-url>/$metadata
+- Reports: <your-service-url>/ReportSet
+- Report with id 1: <your-service-url>/ReportSet(1)
 
 You can do this with all the entities in the service.
 
