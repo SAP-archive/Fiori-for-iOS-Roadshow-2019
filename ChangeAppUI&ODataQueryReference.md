@@ -7,6 +7,7 @@
     * [Creating a new expense](#createexpense)
     * [Updating an existing expense](#updateexpense)
     * [Deleting an existing expense](#deleteexpense)
+    * [Submitting a report](#submitreport)
 
 <a name="changeui"/>
 
@@ -211,3 +212,26 @@ dataService.deleteEntity(existingExpense) { error in
     }
 }
 ```
+
+<a name="submitreport">
+
+### Submitting a report
+
+* Assume a property called `openReport` of type `Report`.
+* Assume the id of the `In Review` report status is `2`.
+
+Setting the `reportStatusID` to `2` will set the status of the report from `Open` to `In Review`. This is considered as submitting a report.
+
+```swift
+report.reportStatusID = 2
+
+travelexpenseService.updateEntity(report) { [weak self] error in
+   // Make sure no errors occurred.
+    if let error = error {
+        NSLog("Error: %@", error.localizedDescription)
+    }
+ }
+
+```
+
+
