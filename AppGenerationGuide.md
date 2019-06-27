@@ -2,6 +2,11 @@
 
 In this guide you will learn how to use the assistant to generate a Master-Detail View app connecting to the previously deployed backend. In addition you will learn how to replace the generated UI with your own.
 
+> NOTE: If you haven't been in the workshop please make sure to finish the following tutorials before going further:
+
+> 1. [Enable SAP Cloud Platform Mobile Services](https://developers.sap.com/tutorials/fiori-ios-hcpms-setup.html)
+> 2. [Configure Mobile Services in iOS Assistant](https://developers.sap.com/tutorials/fiori-ios-scpms-configure-ms-assistant.html)
+
 ## Use the assistant to generate the app
 
 We can use the SAP Cloud Platform for iOS Assistant to generate a Xcode project stub containing required proxy classes and Onboarding implementation. This is really helpful if you have an OData Service you want to connect to because you don't have to spend time building the dataservice layer nor the data model yourself. Also it will give you a full onboarding flow with authentication code. The generated onboarding flow can be changed at any time or completely stript out if you wish.
