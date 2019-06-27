@@ -21,7 +21,7 @@ In the **Release** tab of this GitHub repository you can find the Java Backend A
 
 ![release-1](https://user-images.githubusercontent.com/9074514/60281608-82cefc00-9905-11e9-8b6c-26ef8b95b720.png)
 
-Click on the .WAR file to download it.
+Click on the .war file to download it.
 
 ![release-2](https://user-images.githubusercontent.com/9074514/60281609-82cefc00-9905-11e9-867b-cb63fb6de870.png)
 
@@ -34,28 +34,30 @@ On the left hand side you will see **Applications**, expand it and select **Java
 
 Now click on **Deploy Application**. In the upcoming screen please browse for the WAR you want to deploy. Also select **Java Web Tomcat 8** as **Runtime Name**.
 
-![deploy-3](https://user-images.githubusercontent.com/9074514/60281891-16083180-9906-11e9-8d1f-1850ffcc96c4.png)
+![deploy-3](https://user-images.githubusercontent.com/9074514/60282946-654f6180-9908-11e9-9056-fe360a61cb65.png)
 
 Click on **Deploy**.
 
-The following screen should show up where you have the option to start the Java Application the WAR was deployed succesfully.
+The following screen should show up where you have the option to start the Java Application the .war was deployed succesfully.
 
-![deploy-4](https://user-images.githubusercontent.com/9074514/60281892-16083180-9906-11e9-8c57-0302384c86f2.png)
+![deploy-4](https://user-images.githubusercontent.com/9074514/60282947-654f6180-9908-11e9-95a2-90d346ffff96.png)
+
+![deploy-5](https://user-images.githubusercontent.com/9074514/60282948-654f6180-9908-11e9-902f-faaf8fc60b64.png)
 
 If the application was started successfully you should see something similiar like this.
 
-![deploy-5](https://user-images.githubusercontent.com/9074514/60281893-16a0c800-9906-11e9-9fc3-89c15964f96d.png)
+![deploy-6](https://user-images.githubusercontent.com/9074514/60282949-654f6180-9908-11e9-9a92-af77faec8061.png)
 
 Click on the application name to see the **Application URLs**.
 
-![deploy-6](https://user-images.githubusercontent.com/9074514/60281894-16a0c800-9906-11e9-9ef7-b6592123e65e.png)
+![deploy-7](https://user-images.githubusercontent.com/9074514/60282950-65e7f800-9908-11e9-9851-bba888d46186.png)
 
 To open the service in your browser click the shown URL. You should see the service document now.
 
-![deploy-7](https://user-images.githubusercontent.com/9074514/60281895-16a0c800-9906-11e9-8e60-312ffdf20b5e.png)
+![odata-1](https://user-images.githubusercontent.com/9074514/60282952-65e7f800-9908-11e9-8fa2-60fe6d9eef31.png)
 
 In the url you can add **/$metadata** to see the metadata definition of the OData Service.
 
-![deploy-8](https://user-images.githubusercontent.com/9074514/60281896-16a0c800-9906-11e9-96cb-670d745b34df.png)
+![odata-2](https://user-images.githubusercontent.com/9074514/60282954-65e7f800-9908-11e9-9b73-d9ed4e4d4334.png)
 
 You now have succesfully deployed your Java Backend application!
