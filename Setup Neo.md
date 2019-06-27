@@ -3,7 +3,6 @@
 This document will teach you how to deploy a Java Backend Application on the Neo Landscape.
 
 * [Set up Neo for Mobile Services](#setupneo)
-* [Clone the Fiori-for-iOS-Roadshow-19 repository](#clonerepo)
 * [Deploy the Java Backend to Neo](#deployapp)
 
 <a name="setupneo"/>
