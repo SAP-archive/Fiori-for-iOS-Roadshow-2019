@@ -20,7 +20,7 @@ For this workshop, please choose the **Create New Application**.
 
 ![create-app-2](https://user-images.githubusercontent.com/9074514/59391715-0a274780-8d2a-11e9-9ac0-741dbabafe63.png)
 
-Choose the Mobile Services account you connected to the assistant in the Setup Guide.
+Choose the Mobile Services account you connected to the assistant.
 
 Now make sure the added account is selected and click on **Next**.
 
