@@ -2,23 +2,8 @@
 
 This document will teach you how to deploy a Java Backend Application on the Neo Landscape.
 
-* [Set up Neo for Mobile Services](#setupneo)
-* [Deploy the Java Backend to Neo](#deployapp)
-
-<a name="setupneo"/>
-
-## Enable Mobile Services for Neo
-
-Please complete the following tutorials before continuing with the backend deployment:
-
-1. [Enable SAP Cloud Platform Mobile Services](https://developers.sap.com/tutorials/fiori-ios-hcpms-setup.html)
-2. [Configure Mobile Services in iOS Assistant](https://developers.sap.com/tutorials/fiori-ios-scpms-configure-ms-assistant.html)
-
-> NOTE: Please replace **Basic Authentication** with **SAML Authentication** in the **Configure Mobile Services in iOS Assistant** tutorial!
-
-<a name="deployapp"/>
-
 ## Deploy the Java Backend to Neo
+
 In the **Release** tab of this GitHub repository you can find the Java Backend Application for the Travel Expense Use Case. 
 
 ![release-1](https://user-images.githubusercontent.com/9074514/60281608-82cefc00-9905-11e9-8b6c-26ef8b95b720.png)
