@@ -5,4 +5,4 @@ applications:
   disk_quota: 512M
   instances: 1
   buildpack: java_buildpack
-  path: ./odata-service-0.1.0.war
+  path: ./travelexpense-odata-service-0.1.0.war
