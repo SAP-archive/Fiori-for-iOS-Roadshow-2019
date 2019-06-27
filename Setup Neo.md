@@ -1,6 +1,6 @@
 # Set up Guide
 
-This document will teach you how to setup your development environment, Cloud Foundry landscape and how to deploy and alter the used Java Backend.
+This document will teach you how to deploy a Java Backend Application on the Neo Landscape.
 
 * [Set up Neo for Mobile Services](#setupneo)
 * [Clone the Fiori-for-iOS-Roadshow-19 repository](#clonerepo)
@@ -15,31 +15,25 @@ Please complete the following tutorials in the [Set Up the SAP Cloud Platform SD
 1. [Enable SAP Cloud Platform Mobile Services](https://developers.sap.com/tutorials/fiori-ios-hcpms-setup.html)
 2. [Configure Mobile Services in iOS Assistant](https://developers.sap.com/tutorials/fiori-ios-scpms-configure-ms-assistant.html)
 
-## Clone the Fiori-for-iOS-Roadshow-19 repository
-In order to get the sample backends you should clone the repository to your machine. Why cloning the repository instead of downloading it as ZIP? - If you clone the repository rather then just downloading it as ZIP gives you the advantage that you can pull future changes directly without re-downloading the repository as ZIP.
-
-> If you don't have Git installed on your MacBook please follow the instructions on the official [Git Homepage](https://git-scm.com/book/en/v1/Getting-Started-Installing-Git).
-
-After you succesfully cloned the repository please go in the directory and inspect the items in there.
-
-You will find the following folders:
-
-* Backends
-* ...
-
 <a name="deployapp"/>
 
 ## Deploy the Java Backend to Neo
-Now that you have the Java Backends handy we will go ahead an deploy it on the NEO landscape.
+In the **Release** tab of this GitHub repository you can find the Java Backend Application for the Travel Expense Use Case. 
+
+![release-1](https://user-images.githubusercontent.com/9074514/60281608-82cefc00-9905-11e9-8b6c-26ef8b95b720.png)
+
+Click on the .WAR file to download it.
+
+![release-2](https://user-images.githubusercontent.com/9074514/60281609-82cefc00-9905-11e9-867b-cb63fb6de870.png)
 
 Please go back and login to your [SAP Cloud Platform](https://account.hanatrial.ondemand.com/) account. There please select **Neo** as your landscape.
 ![deploy-1](https://github.wdf.sap.corp/storage/user/16334/files/23b29480-823e-11e9-8380-6710eb5bc6bb)
 
-On the left hand side you will see **Applications** if you expand it now select **Java Applications**. You should see the following screen showing up.
+On the left hand side you will see **Applications**, expand it and select **Java Applications**. You should see the following screen showing up.
 
 ![deploy-2](https://github.wdf.sap.corp/storage/user/16334/files/257c5800-823e-11e9-9a26-30a9bb795ddb)
 
-Now click on **Deploy Application**. In the upcoming screen please brows for the WAR you want to deploy. Also select **Java Web Tomcat 8** as **Runtime Name**.
+Now click on **Deploy Application**. In the upcoming screen please browse for the WAR you want to deploy. Also select **Java Web Tomcat 8** as **Runtime Name**.
 
 ![deploy-3](https://github.wdf.sap.corp/storage/user/16334/files/26ad8500-823e-11e9-8219-77276e6f077e)
 
@@ -53,7 +47,7 @@ If the application was started successfully you should see something similiar li
 
 ![deploy-5](https://github.wdf.sap.corp/storage/user/16334/files/29a87580-823e-11e9-8805-6b6230778beb)
 
-Click now on the application name to see the **Application URLs**.
+Click on the application name to see the **Application URLs**.
 
 ![deploy-6](https://github.wdf.sap.corp/storage/user/16334/files/2b723900-823e-11e9-95dd-ef1b5e9154e9)
 
