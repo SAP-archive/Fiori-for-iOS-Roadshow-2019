@@ -2,8 +2,6 @@
 
 In this guide you will learn how to enable **SAP Mobile Services** for Neo Trial. 
 
-## Enable SAP Mobile Services
-
 In order to fully use the project generation functionalities of the SAP Cloud Platform for iOS Assistant you need to enable SAP CP Mobile Services on Neo Trial.
 
 Please go to [SAP Cloud Platform Account](hanatrial.ondemand.com), log in and select the **Neo Trial** landscape. 
