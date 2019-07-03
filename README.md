@@ -11,11 +11,16 @@ The References and Prerequisites files are located in the root of the repository
 
 Part of the workshop will be setting up your development infrastructure. To do so, you will follow guides which are ordered like the following:
 
-- [Setup Guide](SetupGuide.md)
-- [App Generation Guide](AppGenerationGuide.md)
-- [Change your App UI and get an idea of the used OData query code](ChangeAppUI&ODataQueryReference.md)
+- [1. Deploy the Java Backend to Neo](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/1_Deploy_Backend_On_Neo.md)
+- [2. Enable SAP Mobile Services for Neo Trial](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/2_Enable_Mobile_Services.md)
+- [3_Configure the SAP Cloud Platform SDK for iOS Assistant](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/3_Configure_iOS_Assistant.md)
+- [4. How to generate an app with the SAP Cloud Platform for iOS Assistant](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/4_Generate_App_with_Assistant.md)
+- [5. Make the UI of the generated app your own](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/5_Add_Your_Own_Touch.md)
 
-The [OData Query Examples](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/ChangeAppUI%26ODataQueryReference.md#queries) will provide helpful examples on how to construct backend queries inside your app code. Those samples are tailored to fit the Travel Expense backend.
+There are two additional guides containing information about how to alter your backend and OData Query exampels:
+
+- [Alter the Java Application Backend](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/2_Additional_Guides/Change_Backend_Using_WebIDE.md)
+- [OData Query Examples](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/2_Additional_Guides/OData_Query_Refernce.md)
 
 ### Feedback
 
