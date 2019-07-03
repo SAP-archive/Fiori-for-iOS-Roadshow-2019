@@ -1,4 +1,4 @@
-# Alter the OData Service
+# Alter the Java Application backend
 
 If you want to make changes to the provided OData Service, SAP provides a great tool on SAP Cloud Platform to do so.
 
