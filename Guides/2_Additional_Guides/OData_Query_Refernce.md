@@ -1,4 +1,12 @@
-## OData Query Examples
+# OData Query Examples
+
+* [Getting a list of reports](#getlist)
+* [Getting the list of expenses for a report](#getexpenses)
+* [Creating a new expense](#createexpense)
+* [Attach a receipt to an expense](#attachreceipt)
+* [Updating an existing expense](#updateexpense)
+* [Deleting an existing expense](#deleteexpense)
+* [Submitting a report](#submitexpense)
 
 This guide contains example code for you to get started with writing your own queries for the Travel Expense service.
 
@@ -25,7 +33,7 @@ You can do this with all the entities in the service.
 
 <a name="getlist"/>
 
-### Getting a list of reports
+## Getting a list of reports
 
 * Assume a property called `reports` of type `[Report]`.
 
@@ -47,7 +55,7 @@ travelexpenseService?.fetchReportSet(matching: query) { [weak self] reports, err
 
 <a name="getexpenses">
    
-### Getting the list of expenses for a report
+## Getting the list of expenses for a report
 
 When displaying the details for a selected report, you will likely want to display the list of associated expense items.
 
@@ -77,7 +85,7 @@ travelexpenseService?.fetchExpenseSet(matching: query) { [weak self] expenses, e
 
 <a name="createexpense">
    
-### Creating a new expense
+## Creating a new expense
 
 * Assume a property called `report` of type `Report`.
 * Assume a property called `newExpense` of type `Expense`.
@@ -102,9 +110,9 @@ travelexpenseService.createEntity(newExpense) {[weak self] error in
 }
 ```
 
-<a name="attachReceipt">
+<a name="attachreceipt">
 
-### Attach a receipt to an expense
+## Attach a receipt to an expense
 
 * Assume a property called `existingExpense` of type `Expense`.
 * Assume the properties of `existingExpense` are already set and you want to attach an image.
@@ -130,7 +138,7 @@ travelexpenseService.createEntity(newExpense) {[weak self] error in
 
 <a name="updateexpense">
    
-### Updating an existing expense
+## Updating an existing expense
 
 * Assume a property called `existingExpense` of type `Expense`.
 
@@ -146,7 +154,7 @@ dataService.updateEntity(existingExpense) {[weak self] error in
 
 <a name="deleteexpense">
    
-### Deleting an existing expense
+## Deleting an existing expense
 
 * Assume a property called `existingExpense` of type `Expense`.
 
@@ -162,7 +170,7 @@ dataService.deleteEntity(existingExpense) {[weak self] error in
 
 <a name="submitreport">
 
-### Submitting a report
+## Submitting a report
 
 * Assume a property called `openReport` of type `Report`.
 * Assume the id of the `In Review` report status is `2`.
