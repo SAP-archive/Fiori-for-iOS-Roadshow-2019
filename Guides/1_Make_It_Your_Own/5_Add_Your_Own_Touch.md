@@ -1,8 +1,4 @@
-# Change your App UI and get an idea of the used OData query code
-
-<a name="changeui"/>
-
-## Replace generated UI code with your own
+# Make the UI of the generated app your own
 
 Now that you have your app generated you can run it. You will see a more or less satifying UI but what you really want is replace that UI with your own creative UI.
 
