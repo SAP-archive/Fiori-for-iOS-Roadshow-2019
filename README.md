@@ -16,6 +16,7 @@ Part of the workshop will be setting up your development infrastructure. To do s
 3. [Configure the SAP Cloud Platform SDK for iOS Assistant](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/3_Configure_iOS_Assistant.md)
 4. [How to generate an app with the SAP Cloud Platform for iOS Assistant](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/4_Generate_App_with_Assistant.md)
 5. [Make the UI of the generated app your own](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/5_Add_Your_Own_Touch.md)
+6. [OData_Query_Refernce](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/1_Make_It_Your_Own/6_OData_Query_Refernce.md)
 
 There are two additional guides containing information about how to alter your backend database and examples of OData queries you can use to access and update data in your backend:
 
