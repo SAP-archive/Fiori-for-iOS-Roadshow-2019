@@ -21,7 +21,6 @@ Part of the workshop will be setting up your development infrastructure. To do s
 There are two additional guides containing information about how to alter your backend database and examples of OData queries you can use to access and update data in your backend:
 
 - [Alter the Java Application Backend](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/2_Additional_Guides/Change_Backend_Using_WebIDE.md)
-- [OData Query Examples](https://github.com/SAP-samples/Fiori-for-iOS-Roadshow-2019/blob/master/Guides/2_Additional_Guides/OData_Query_Refernce.md)
 
 ### Feedback
 
