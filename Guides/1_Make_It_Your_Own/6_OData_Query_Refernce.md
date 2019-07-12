@@ -45,7 +45,7 @@ let query = DataQuery().orderBy(Report.end, .descending).expand(Report.reportSta
 // Fetch all expense reports, using the query parameters defined above.
 travelexpenseService?.fetchReportSet(matching: query) { [weak self] reports, error in
    if let error = error {
-      NSLog("Error: %@", error!.localizedDescription)
+      NSLog("Error: %@", error.localizedDescription)
       return
    }
    self?.reports = reports!
@@ -66,7 +66,7 @@ When displaying the details for a selected report, you will likely want to displ
 // Filter the results by the selected report ID, automatically retrieving
 // associated records for the expense type, attachments, currencies and ordering
 // by the expense date, ascending.
-let reportID = report.reportid!
+let reportID = report.reportID!
 let query = DataQuery().filter(Expense.reportID == reportID)
             .expand(Expense.expenseType, Expense.attachments, Expense.currency)
             .orderBy(Expense.date)
@@ -75,7 +75,7 @@ let query = DataQuery().filter(Expense.reportID == reportID)
 travelexpenseService?.fetchExpenseSet(matching: query) { [weak self] expenses, error in
    // Make sure no errors occurred.
    if let error = error {
-      NSLog("Error: %@", error!.localizedDescription)
+      NSLog("Error: %@", error.localizedDescription)
       return
    }
    self?.expenses = expenses!
