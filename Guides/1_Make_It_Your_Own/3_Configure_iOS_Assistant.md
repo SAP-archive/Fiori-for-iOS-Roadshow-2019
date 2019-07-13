@@ -22,20 +22,19 @@ You should now see the following pop-up:
 
 Click **Allow** to launch the SAP Cloud Platform SDK for iOS Assistant app. The **Add Mobile Services Account** settings dialog will open, and both **API URL** and **UI URL** parameters will be pre-populated automatically:
 
-![configure3](https://user-images.githubusercontent.com/9074514/60555620-98239c00-9cf2-11e9-8565-5202c24f44c3.png)
+![configure3](https://user-images.githubusercontent.com/9074514/61164614-ffa4cd00-a4e4-11e9-8249-1598dfe5d396.png)
 
 Provide the following additional details:
 
 | Field | Value |
 |----|----|
 | Name | A descriptive name for the configuration, for instance `SAP Cloud Platform Mobile Services` |
-| Authentication Type | `Basic Authentication` |
-| User | Your trial account user id |
-| Password | Password for your trial account user |
+| Authentication Type | `SAML Authentication` |
 
-![configure4](https://user-images.githubusercontent.com/9074514/60555621-98bc3280-9cf2-11e9-8f06-91d1c02749c5.png)
 
-Click the **Save** button when finished. Your account is now added to the SDK Assistant:
+Click the **Save** button when finished.
+
+Your account is now added to the SDK Assistant:
 
 ![configure5](https://user-images.githubusercontent.com/9074514/60555622-98bc3280-9cf2-11e9-8313-b5cf8d326b1a.png)
 
