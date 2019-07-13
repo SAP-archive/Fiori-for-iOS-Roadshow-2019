@@ -49,7 +49,7 @@ Now it is time to define the Xcode project configuration. Please fill out the fi
 
 The last step is to configure what features the assistant will include in the generated project. Please leave **Onboarding** and **Master / Detail Screens for Destination** selected and click the **Finish** button.
 
-![create-app-11](https://user-images.githubusercontent.com/9074514/59391724-0abfde00-8d2a-11e9-900d-4dd6c5dff4c0.png)
+![create-app-11](https://user-images.githubusercontent.com/9074514/61164878-907ca800-a4e7-11e9-9633-f03849573d32.png)
 
 The assistant will now fetch the metadata document from your backend, generate the data model as avset of Swift proxy classes, create sample views and query logic, then wrap it all in a Xcode project you can use to explore your data and customize to fit your own design.
 
