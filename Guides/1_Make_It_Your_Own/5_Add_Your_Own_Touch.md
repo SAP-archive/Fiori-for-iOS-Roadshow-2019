@@ -58,19 +58,8 @@ This code initializes the generated views from the Main.storyboard and sets conf
 to
 
 ```swift
-let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
             let navController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as! UINavigationController
-            let mainVC = navController.children.first as? MainTableViewController
-            mainVC?.delegate = appDelegate
             appViewController = navController
-
-```
-
-You will see a compile error because the MainTableViewController doesn't have a property **delegate** yet. Add the following line of code to your MainTableViewController.swift class right below the class declaration:
-
-```swift
-
-var delegate: AppDelegate?
 
 ```
 
@@ -103,7 +92,7 @@ var travelexpenseService: TravelexpenseService<OnlineODataProvider>?
         tableView.register(FUIObjectTableViewCell.self, forCellReuseIdentifier: FUIObjectTableViewCell.reuseIdentifier)
         setupKPIHeader()
         
-        guard let travelexpenseService = delegate?.sessionManager.onboardingSession?.odataController.travelexpenseService else {
+        guard let travelexpenseService = appDelegate.sessionManager.onboardingSession?.odataController.travelexpenseService else {
             AlertHelper.displayAlert(with: "OData service is not reachable, please onboard again.", error: nil, viewController: self)
             return
         }
@@ -160,6 +149,16 @@ var travelexpenseService: TravelexpenseService<OnlineODataProvider>?
         
         return cell
     }
+
+```
+
+For it to compile we have to get an instance of the travelexpense service. The service is instantiated in the AppDelegate, to get an instance of the AppDelegate for all of your UITableViewController please add the following lines outside of your closing class bracket.
+
+```swift
+
+   extension UITableViewController {
+    var appDelegate: AppDelegate { return (UIApplication.shared.delegate as! AppDelegate) }
+   }
 
 ```
 
