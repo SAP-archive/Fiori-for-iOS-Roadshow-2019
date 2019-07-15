@@ -12,9 +12,11 @@ In order to implement your own UI, select the Main.storyboard file and delete al
 
 ![xcode-storyboard-1](https://user-images.githubusercontent.com/9074514/59394220-b4579d00-8d33-11e9-9c80-2e62b510bc1f.png)
 
-Now add a new UITableViewController from the Xcode Object Library. Select the added UITableViewController. Select your just added UITableViewController and in the navigation bar click on **Editor**, then on **Embedd in** and select **Navigation Controller**.
+Now add a new UITableViewController from the Xcode Object Library.
 
 ![tableVC](https://user-images.githubusercontent.com/9074514/61244047-29850c00-a6fe-11e9-8b5a-83e15003136c.png)
+
+Select the added UITableViewController. Select your just added UITableViewController and in the navigation bar click on **Editor**, then on **Embedd in** and select **Navigation Controller**.
 
 ![navcontroller-1](https://user-images.githubusercontent.com/9074514/61244046-29850c00-a6fe-11e9-817b-80adff4e8c32.png)
 
