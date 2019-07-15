@@ -12,27 +12,34 @@ In order to implement your own UI, select the Main.storyboard file and delete al
 
 ![xcode-storyboard-1](https://user-images.githubusercontent.com/9074514/59394220-b4579d00-8d33-11e9-9c80-2e62b510bc1f.png)
 
-Now add a new UIViewController from the Xcode Object Library. Select the added UIViewController and on the right-hand side click on the Attributes Inspector. In the Attributes Inspector check the **Is Initial View Controller**. Your new UIViewController is now your initial view controller.
+Now add a new UITableViewController from the Xcode Object Library. Select the added UITableViewController. Select your just added UITableViewController and in the navigation bar click on **Editor**, then on **Embedd in** and select **Navigation Controller**.
 
-![xcode-storyboard-2](https://user-images.githubusercontent.com/9074514/59394221-b4579d00-8d33-11e9-9cb4-698b6ef4f791.png)
+![tableVC](https://user-images.githubusercontent.com/9074514/61244047-29850c00-a6fe-11e9-8b5a-83e15003136c.png)
 
-The UIViewController in the storybaord needs a UIViewController subclass to back the UI up. In Xcode, create a new UIViewController subclass and name it **MainViewController**.
+![navcontroller-1](https://user-images.githubusercontent.com/9074514/61244046-29850c00-a6fe-11e9-817b-80adff4e8c32.png)
 
-![xcode-vc-1](https://user-images.githubusercontent.com/9074514/59394463-963e6c80-8d34-11e9-9937-e788f858dea0.png)
+Xcode will embedd your UITableViewController in a UINavigationController. Select the added UINavigationController and on the right-hand side click on the Attributes Inspector. In the Attributes Inspector check the **Is Initial View Controller**. Your new UINavigationController is now your initial view controller.
 
-Go back to the Main.storyboard and select your UIViewController. In the Identity Inspector set the class to **MainViewController** and hit return. You've now connected the visual representation in the storyboard to a Swift class.
 
-![xcode-vc-2](https://user-images.githubusercontent.com/9074514/59394464-963e6c80-8d34-11e9-9e8d-03f666fca7d2.png)
+![isinitialvc](https://user-images.githubusercontent.com/9074514/61244045-29850c00-a6fe-11e9-8aa1-76117c2c35ac.png)
+
+The UITableViewController in the storybaord needs a UITableViewController subclass to back the UI up. In Xcode, create a new UITableViewController subclass and name it **MainTableViewController**.
+
+![addclass-2](https://user-images.githubusercontent.com/9074514/61244371-ee370d00-a6fe-11e9-8699-02346668df7c.png)
+
+Go back to the Main.storyboard and select your UITableViewController. In the Identity Inspector set the class to **MainTableViewController** and hit return. You've now connected the visual representation in the storyboard to a Swift class.
+
+![addclass](https://user-images.githubusercontent.com/9074514/61244039-29850c00-a6fe-11e9-9950-65b4484a3d90.png)
 
 Last step is to change the code in the **ApplicationUIManager.swift** class to initialize your view controller instead of the provided in the generated project.
 
 Open the **ApplicationUIManager.swift** file.
 
-![xcode-2](https://user-images.githubusercontent.com/9074514/59394562-f2a18c00-8d34-11e9-814f-17ba4918f443.png)
+![xcode-2](https://user-images.githubusercontent.com/9074514/61244428-0f97f900-a6ff-11e9-8e59-b1a053e21a8a.png)
 
 Search for **splitViewController**.
 
-![xcode-3](https://user-images.githubusercontent.com/9074514/59394564-f46b4f80-8d34-11e9-9829-2ec896a73f55.png)
+![xcode-3](https://user-images.githubusercontent.com/9074514/61244429-0f97f900-a6ff-11e9-8384-8e35604137e3.png)
 
 This code initializes the generated views from the Main.storyboard and sets configures the default view controller. For your custom UI, change the following code:
 
@@ -49,18 +56,115 @@ This code initializes the generated views from the Main.storyboard and sets conf
 to
 
 ```swift
-let mainViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as! MainViewController
-            mainViewController.modalPresentationStyle = .currentContext
-            appViewController = mainViewController
+let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+            let navController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as! UINavigationController
+            let mainVC = navController.children.first as? MainTableViewController
+            mainVC?.delegate = appDelegate
+            appViewController = navController
 
 ```
 
-If you run the app now you should just see a white screen instead of the generated UI. To actually see something more interesting, go back to the Main.storyboard and add a UILabel to the view and set its text to somthing unique.
+You will see a compile error because the MainTableViewController doesn't have a property **delegate** yet. Add the following line of code to your MainTableViewController.swift class right below the class declaration:
 
-![add-label-1](https://user-images.githubusercontent.com/9074514/59394784-e669fe80-8d35-11e9-84ba-025fb3d1cb3d.png)
+```swift
 
-Run the app and you should see your added label appear on the screen.
+var delegate: AppDelegate?
 
-![add-label-2](https://user-images.githubusercontent.com/9074514/59394785-e669fe80-8d35-11e9-92c4-b1622d9b68cf.png)
+```
+
+If you run the app now you should just see a white screen instead of the generated UI.
+
+![emptytv](https://user-images.githubusercontent.com/9074514/61244040-29850c00-a6fe-11e9-83e7-7d1e13865312.png)
+
+To actually see something more interesting, go back to the MainTableViewController swift class and add the following import statements:
+
+```swift
+
+import SAPOData
+import SAPFiori
+
+```
+
+Also replace everything in the class with the following code (right below the delegate declaration):
+
+```swift
+
+var travelexpenseService: TravelexpenseService<OnlineODataProvider>?
+    var reports = [Report]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.backgroundColor = UIColor.preferredFioriColor(forStyle: .backgroundBase)
+        tableView.separatorStyle = .none
+        
+        tableView.register(FUIObjectTableViewCell.self, forCellReuseIdentifier: FUIObjectTableViewCell.reuseIdentifier)
+        setupKPIHeader()
+        
+        guard let travelexpenseService = delegate?.sessionManager.onboardingSession?.odataController.travelexpenseService else {
+            AlertHelper.displayAlert(with: "OData service is not reachable, please onboard again.", error: nil, viewController: self)
+            return
+        }
+        self.travelexpenseService = travelexpenseService
+        
+        loadData()
+    }
+    
+    private func loadData() {
+        let query = DataQuery().orderBy(Report.end, .descending).expand(Report.reportStatus)
+        
+        // Fetch all expense reports, using the query parameters defined above.
+        travelexpenseService?.fetchReportSet(matching: query) { [weak self] reports, error in
+            if let error = error {
+                NSLog("Error: %@", error.localizedDescription)
+                return
+            }
+            self?.reports = reports!
+            self?.tableView.reloadData()
+        }
+    }
+    
+    private func setupKPIHeader() {
+        
+        let kpiHeader = FUIKPIHeader()
+        
+        let standardKPI1 = FUIKPIView()
+        standardKPI1.items = [FUIKPIMetricItem(string: "2")]
+        standardKPI1.captionlabel.text = "Customers Assisted"
+        standardKPI1.colorScheme = .dark
+        standardKPI1.isEnabled = true
+        
+        let standardKPI2 = FUIKPIView()
+        standardKPI2.items = [FUIKPIMetricItem(string: "4")]
+        standardKPI2.captionlabel.text = "Orders"
+        standardKPI2.colorScheme = .dark
+        standardKPI2.isEnabled = true
+        
+        kpiHeader.items = [standardKPI1, standardKPI2]
+        tableView.tableHeaderView = kpiHeader
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // return 0 as we display only the header
+        return reports.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let report = reports[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: FUIObjectTableViewCell.reuseIdentifier) as! FUIObjectTableViewCell
+        cell.headlineText = report.name
+        cell.subheadlineText = report.city
+        cell.statusText = report.reportStatus?.description
+        
+        return cell
+    }
+
+```
+
+Run the app and you should see a FUIKPIHeader and the UITableView filled with reports out of the database.
+
+> NOTE: If you're using Online OData replace the `OnlineODataProvider` with `OfflineODataProvicder` in the `travelexpenseService` declaration.
+
+![finalapp](https://user-images.githubusercontent.com/9074514/61244042-29850c00-a6fe-11e9-85be-071239f5b95e.png)
 
 Congratulations! You just replaced the generated UI with your own. You have the perfect starting point now to implement your own Travel Expense app.
