@@ -164,7 +164,19 @@ For it to compile we have to get an instance of the travelexpense service. The s
 
 Run the app and you should see a FUIKPIHeader and the UITableView filled with reports out of the database.
 
-> NOTE: If you're using Online OData replace the `OnlineODataProvider` with `OfflineODataProvicder` in the `travelexpenseService` declaration.
+> **NOTE:** If you're using the OfflineOData please replace the following lines of code:
+
+```swift
+var travelexpenseService: TravelexpenseService<OnlineODataProvider>?
+
+```
+
+with
+
+```swift
+var travelexpenseService: TravelexpenseService<OfflineODataProvider>?
+
+```
 
 ![finalapp](https://user-images.githubusercontent.com/9074514/61244042-29850c00-a6fe-11e9-85be-071239f5b95e.png)
 
