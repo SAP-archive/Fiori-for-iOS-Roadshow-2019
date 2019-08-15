@@ -3,6 +3,7 @@
 This document contains links to several documentation or information websites for the presented topics.
 
 * [SAP](#sap)
+  * [SAP Community](#community)
   * [SAP Web IDE](#webide)
   * [SAP Cloud Platform SDK for iOS](#scpsdk)
   * [SAP Fiori for iOS - Design Language](#fioriios)
@@ -14,6 +15,14 @@ This document contains links to several documentation or information websites fo
 <a name="sap"/>
 
 ## SAP
+
+<a name="community"/>
+
+### SAP Community
+
+* [SAP Developer Portal](https://developers.sap.com)
+* [SAP Tutorial Navigator](https://developers.sap.com/tutorial-navigator.html)
+* [SAP Community Blogs](https://blogs.sap.com)
 
 <a name="webide"/>
 
