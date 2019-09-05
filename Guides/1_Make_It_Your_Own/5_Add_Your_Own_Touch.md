@@ -178,6 +178,14 @@ var travelexpenseService: TravelexpenseService<OfflineODataProvider>?
 
 ```
 
+If you're using the Offline OData, you have to import SAPOfflineOData framework. Please add the following import statement:
+
+```swift
+
+import SAPOfflineOData
+
+```
+
 ![finalapp](https://user-images.githubusercontent.com/9074514/61244042-29850c00-a6fe-11e9-85be-071239f5b95e.png)
 
 Congratulations! You just replaced the generated UI with your own. You have the perfect starting point now to implement your own Travel Expense app.
