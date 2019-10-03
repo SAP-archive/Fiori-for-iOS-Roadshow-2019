@@ -1,0 +1,85 @@
+# Collection of Useful Code Snippets
+
+## Dates
+
+The assumption is that the object representing a date in an OData backend is of type LocalDateTime.
+The LocalDateTime type is referenced here: 
+
+### Formatting a date from the backend with the DateFormatter
+
+```Swift
+var report: Report?
+
+let dateFormatter = DateFormatter()
+
+// ...
+
+dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss" // String Date Format
+dateFormatter.timeZone = TimeZone.current
+dateFormatter.locale = Locale.current
+let convertedDate = dateFormatter.date(from: report.start?.utc())
+
+```
+
+### Setting a date from the backend as display value of a FUIDatePickerFormCell
+
+```Swift
+
+var report: Report?
+
+var startDatePicker: FUIDatePickerFormCell?
+var endDatePicker: FUIDatePickerFormCell?
+
+// ...
+
+startDatePicker.keyName = "Start"
+let startDate = report.start?.utc()
+
+if let startDate = fromDate {
+    startDatePicker.value = fromDate
+}
+
+endDatePicker.keyName = "End"
+let endDate = report.end?.utc()
+
+if let endDate = toDate {
+    endDatePicker.value = toDate
+}
+
+```
+
+### Formatting back to LocalDateTime to set on entity
+
+```Swift
+
+var report: Report?
+
+var startDatePicker: FUIDatePickerFormCell?
+var endDatePicker: FUIDatePickerFormCell?
+
+// ...
+
+report.start = LocalDateTime.from(utc: startDatePicker.value)
+report.end = LocalDateTime.from(utc: endDatePicker.value)
+
+```
+
+## Currency
+
+### Formatting a double using NumberFormatter
+
+func formatDoubleToCurrency(amount: Double) -> String{
+    let numberFormatter = NumberFormatter()
+    numberFormatter.numberStyle = .currency
+    numberFormatter.locale = Locale.current
+    return numberFormatter.string(from: NSNumber(value: amount))!
+}
+
+### Formatting a double using NumberFormatter back
+
+func formatCurrencyToDouble(input: String) -> Double? {
+     let numberFormatter = NumberFormatter()
+     numberFormatter.numberStyle = .currency
+     numberFormatter.locale = Locale.current
+     return numberFormatter.number(from: input)?.doubleValue
+}
