@@ -4,11 +4,13 @@
 
 The SAP Cloud Platform SDK for iOS is designed to work seamlessly with a set of services provided by the SAP Cloud Platform that are optimized for communication with mobile devices, known collectively as Mobile Services. These include not only data services, but also features like analytics, push notifications, and app configuration.
 
-Go to `https://account.hanatrial.ondemand.com/cockpit/#/acc/` + YOUR_P_NUMBER +`trial/service/mobileplatform2/overview` – replacing 'YOUR_P_NUMBER' with your trial account number.
+Go to `https://hcpmsadmin-` + YOUR_P/S_NUMBER +`trial.dispatcher.hanatrial.ondemand.com/sap/mobile/admin/ui/` – replacing 'YOUR_P_NUMBER' with your trial account number.
 
 > NOTE: Once loaded, you might want to bookmark this link!
 
 The SAP Cloud Platform SDK for iOS includes an Assistant app for macOS that generates and manages your iOS apps that use the Mobile Services. To get started with the Assistant, you'll need to configure it for your account. Part of this configuration can be imported automatically.
+
+> NOTE: In case there is a window coming up with news about the SAP Mobile Cards, please close that window to continue.
 
 Once you're logged in to **SAP Cloud Platform Mobile Services**, click the **Important Links** item in the lower section of the left panel to open **Important Links** section. 
 
