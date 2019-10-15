@@ -4,7 +4,13 @@ In this guide you will learn how to enable **SAP Mobile Services** for your Neo 
 
 In order to fully use the project generation functionalities of the **SAP Cloud Platform for iOS Assistant** you need to enable SAP CP Mobile Services on Neo Trial.
 
-Please go to [SAP Cloud Platform Account](hanatrial.ondemand.com), log in and select the **Neo Trial**. 
+Please go to [SAP Cloud Platform Account](hanatrial.ondemand.com).
+
+![fiori-ios-scpms-enable-ms-neo-1](https://user-images.githubusercontent.com/9074514/66821949-9bf6c980-ef43-11e9-99a8-d3d9fa6d8dd3.png)
+
+Scroll down and click on **Access Neo Trial**.
+
+![fiori-ios-scpms-enable-ms-neo-2](https://user-images.githubusercontent.com/9074514/66821950-9bf6c980-ef43-11e9-96c0-399f0e30ecb5.png)
 
 > NOTE: You might want to Bookmark this link!
 
