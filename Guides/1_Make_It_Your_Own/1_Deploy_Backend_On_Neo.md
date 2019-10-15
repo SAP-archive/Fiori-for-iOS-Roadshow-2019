@@ -1,6 +1,6 @@
 # Deploy the Java Backend to Neo
 
-In the **Release** tab of this GitHub repository you can find the Java Backend Application for the Travel Expense Use Case. 
+In the **Release** tab of this GitHub repository you can find the Java Backend Application for the Travel Expense Use Case.
 
 ![release-1](https://user-images.githubusercontent.com/9074514/60281608-82cefc00-9905-11e9-8b6c-26ef8b95b720.png)
 
@@ -8,10 +8,14 @@ Click on file ending in .war file to download to any location on your Mac.
 
 ![release-2](https://user-images.githubusercontent.com/9074514/60281609-82cefc00-9905-11e9-867b-cb63fb6de870.png)
 
-Log On to account at [SAP Cloud Platform](https://account.hanatrial.ondemand.com/) then select **Neo Trial** as your platform.
-![deploy-1](https://user-images.githubusercontent.com/9074514/60281889-156f9b00-9906-11e9-885d-a21d0221489d.png)
+Log On to account at [SAP Cloud Platform](https://account.hanatrial.ondemand.com/).
+![deploy-1](https://user-images.githubusercontent.com/9074514/66821316-8634d480-ef42-11e9-8ea7-e52bb068eefd.png)
 
-In the left-hand panel, click on **Applications** to expand it, then click on **Java Applications**. You will see a screen similiar to the following:
+Next scroll down a bit until you see **Access Neo Trial**. Click on the **Access Neo Trial** link to open the Neo landscape.
+
+![deploy-2](https://user-images.githubusercontent.com/9074514/66821318-86cd6b00-ef42-11e9-9647-7ace4d9fa860.png)
+
+In the left-hand panel, click on **Applications** to expand it, then click on **Java Applications**. You will see a screen similar to the following:
 
 ![deploy-2](https://user-images.githubusercontent.com/9074514/60281890-156f9b00-9906-11e9-8a3b-58c1370be7ef.png)
 
