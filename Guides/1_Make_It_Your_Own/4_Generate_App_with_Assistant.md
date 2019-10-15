@@ -23,7 +23,7 @@ Select the Mobile Services account you connected to the assistant in the previou
 ![create-app-4](https://user-images.githubusercontent.com/9074514/59391717-0a274780-8d2a-11e9-800f-4c4dc8749626.png)
 <a name="changeui"/>
 
-The next step creates a Cloud Application in Mobile Services. Please fill out the fields and select OAuth2 as authentication method then click the **Next** button.
+The next step creates a Cloud Application in Mobile Services. Please fill out the fields and select **OAuth2** as authentication method then click the **Next** button.
 
 ![create-app-5](https://user-images.githubusercontent.com/9074514/59391718-0a274780-8d2a-11e9-8372-771b7d0e1b05.png)
 
@@ -31,7 +31,7 @@ Adding a destination will make sure the assistant can make the right connection 
 
 ![create-app-6](https://user-images.githubusercontent.com/9074514/59391719-0a274780-8d2a-11e9-8d4d-41c2ec51bf48.png)
 
-Complete the fields in the next screen by providing the backend URL you got when you deployed the Java Application Backend to your Neo Trial account. Then choose **No Authentication** because we don't need to authentication for this sample backend. If you want to try out different authentication methods, feel free to do so then click the **Save** button.
+Complete the fields in the next screen by providing the backend URL shown after you deployed the Java Application Backend to your Neo Trial account. Then choose **No Authentication** because we don't need to authentication for this sample backend. If you want to try out different authentication methods, feel free to do so then click the **Save** button.
 
 ![create-app-7](https://user-images.githubusercontent.com/9074514/59391720-0a274780-8d2a-11e9-9494-d63d8fd6de97.png)
 
