@@ -6,7 +6,7 @@ We can use the SAP Cloud Platform for iOS Assistant to generate a Xcode project 
 
 To generate a new Xcode template app for a mobile service, launch the assistant and click the **Create New** button.
 
-![create-app-1](https://user-images.githubusercontent.com/9074514/59391714-098eb100-8d2a-11e9-84d0-0585acb3d123.png)
+![create-app-1](https://user-images.githubusercontent.com/9074514/66822345-61d9f780-ef44-11e9-9f59-807eacbb502a.png)
 
 In the following screen you have three app creation options to choose from including:
 
@@ -49,7 +49,7 @@ Now it is time to define the Xcode project configuration. Please fill out the fi
 
 The last step is to configure what features the assistant will include in the generated project. Please leave **Onboarding** and **Master / Detail Screens for Destination** selected and click the **Finish** button.
 
-![create-app-11](https://user-images.githubusercontent.com/9074514/61164878-907ca800-a4e7-11e9-9633-f03849573d32.png)
+![create-app-11](https://user-images.githubusercontent.com/9074514/66822564-c39a6180-ef44-11e9-8fbe-ad790064c49f.png)
 
 The assistant will now fetch the metadata document from your backend, generate the data model as avset of Swift proxy classes, create sample views and query logic, then wrap it all in a Xcode project you can use to explore your data and customize to fit your own design.
 
