@@ -3,11 +3,11 @@ A collection of materials for the SAP Cloud Platform SDK for iOS Workshop.
 
 ## Description
 
-This repository contains the materials for the SAP & Apple Roadshow 2019. Prequisites are documented in the [Prerequisites](Prerequisites.md) file. You can find a [Reference](References.md) file which contains links to various information and resource websites.
+This repository contains the materials for the SAP & Apple Roadshow 2019. You can find a [Reference](References.md) file which contains links to various information and resource websites.
 
 ### Material organization
 
-The References and Prerequisites files are located in the root of the repository. The sample backend binary and source files  can be found in the Release tab of this repository.
+The References file are located in the root of the repository. The sample backend binary and source files  can be found in the Release tab of this repository.
 
 Part of the workshop will be setting up your development infrastructure. To do so, you will follow guides which are ordered as follows:
 
@@ -25,10 +25,6 @@ There are two additional guides containing information about how to alter your b
 ### Feedback
 
 Feel free to leave us feedback or bugs as an Issue on GitHub. Also talk to us after the workshop if there are any further questions. Thank you.
-
-## Requirements
-
-The requirements to follow the exercises in this repository, including hardware and software, are detailed in the [Prerequisites](Prerequisites.md) file.
 
 ## Download and installation
 
