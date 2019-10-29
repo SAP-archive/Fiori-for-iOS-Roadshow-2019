@@ -87,3 +87,27 @@ func formatCurrencyToDouble(input: String) -> Double? {
      return numberFormatter.number(from: input)?.doubleValue
 }
 ```
+
+## Prepare for Segue
+
+Assuming you created a segue in storyboard from one UI element to another View Controller, set the segue identifier and now want to pass data to the destination View Controller, you can implement the prepare(for:sender:) method. This method will allow you to do any setup code inbetween navigation from one View Controller to the other.
+
+```swift
+// MARK: - Navigation
+
+override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+
+    guard let path = tableView.indexPathForSelectedRow else { return }
+    guard let segueID = segue.identifier else {return}
+
+    switch segueID {
+        case "showExpenses" :
+            let selectedEntity = self.reports[indexPath.row]
+            let detailViewController = segue.destination as! DetailReportViewController
+            detailViewController.report = selectedEntity
+        default: return
+    }
+}
+
+
+```
