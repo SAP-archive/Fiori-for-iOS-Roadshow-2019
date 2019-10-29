@@ -7,7 +7,7 @@ The LocalDateTime type is referenced here:
 
 ### Formatting a date from the backend with the DateFormatter
 
-```Swift
+```swift
 var report: Report?
 
 let dateFormatter = DateFormatter()
@@ -23,7 +23,7 @@ let convertedDate = dateFormatter.date(from: report.start?.utc())
 
 ### Setting a date from the backend as display value of a FUIDatePickerFormCell
 
-```Swift
+```swift
 
 var report: Report?
 
@@ -50,7 +50,7 @@ if let endDate = toDate {
 
 ### Formatting back to LocalDateTime to set on entity
 
-```Swift
+```swift
 
 var report: Report?
 
@@ -68,18 +68,22 @@ report.end = LocalDateTime.from(utc: endDatePicker.value)
 
 ### Formatting a double using NumberFormatter
 
+```swift
 func formatDoubleToCurrency(amount: Double) -> String{
     let numberFormatter = NumberFormatter()
     numberFormatter.numberStyle = .currency
     numberFormatter.locale = Locale.current
     return numberFormatter.string(from: NSNumber(value: amount))!
 }
+```
 
 ### Formatting a double using NumberFormatter back
 
+```swift
 func formatCurrencyToDouble(input: String) -> Double? {
      let numberFormatter = NumberFormatter()
      numberFormatter.numberStyle = .currency
      numberFormatter.locale = Locale.current
      return numberFormatter.number(from: input)?.doubleValue
 }
+```
