@@ -74,7 +74,7 @@ If you run the app now you should just see a white screen instead of the generat
 
 ![emptytv](https://user-images.githubusercontent.com/9074514/66825540-bb452500-ef4a-11e9-9410-f2be866d6caa.png)
 
-The dataservice is instantiated in the AppDelegate, to get an instance of the AppDelegate for all of your UITableViewController please add the following lines outside of your closing class bracket.
+The dataservice is instantiated in the AppDelegate, to get an instance of the AppDelegate for all of your UITableViewController please add the following lines outside of your closing class brackets of the AppDelegate.swift class.
 
 ```Swift
 
@@ -189,6 +189,7 @@ var travelexpenseService: TravelexpenseService<OnlineODataProvider>?
         cell.headlineText = report.name
         cell.subheadlineText = report.city
         cell.statusText = report.reportStatus?.description
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
