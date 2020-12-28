@@ -1,3 +1,8 @@
+![](https://img.shields.io/badge/STATUS-NOT%20CURRENTLY%20MAINTAINED-red.svg?longCache=true&style=flat)
+
+# Important Notice
+This public repository is read-only and no longer maintained.
+
 # Fiori-for-iOS-Roadshow-2019
 A collection of materials for the SAP Cloud Platform SDK for iOS Workshop.
 
